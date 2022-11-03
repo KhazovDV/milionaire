@@ -14,6 +14,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func gameRullesButton(_ sender: Any) {
+        let gameRulesVC = GameRulesVC()
+        self.present(gameRulesVC, animated: true)
+    }
+    
 }
 
