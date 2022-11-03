@@ -14,6 +14,7 @@
 		9E1A41C729102A9D009D16BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E1A41C629102A9D009D16BD /* Assets.xcassets */; };
 		9E1A41CA29102A9D009D16BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1A41C829102A9D009D16BD /* LaunchScreen.storyboard */; };
 		9E1A41D529102B67009D16BD /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1A41D429102B67009D16BD /* Brain.swift */; };
+		AA73CDD62913E080000A7894 /* GameRulesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA73CDD52913E080000A7894 /* GameRulesVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9E1A41C929102A9D009D16BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E1A41CB29102A9D009D16BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E1A41D429102B67009D16BD /* Brain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
+		AA73CDD52913E080000A7894 /* GameRulesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRulesVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				9E1A41C129102A9B009D16BD /* ViewController.swift */,
+				AA73CDD52913E080000A7894 /* GameRulesVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E1A41C229102A9B009D16BD /* ViewController.swift in Sources */,
+				AA73CDD62913E080000A7894 /* GameRulesVC.swift in Sources */,
 				9E1A41BE29102A9B009D16BD /* AppDelegate.swift in Sources */,
 				9E1A41D529102B67009D16BD /* Brain.swift in Sources */,
 				9E1A41C029102A9B009D16BD /* SceneDelegate.swift in Sources */,
