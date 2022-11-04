@@ -98,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				9E1A41C329102A9B009D16BD /* Main.storyboard */,
-				AA73CDD52913E080000A7894 /* GameRulesVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
