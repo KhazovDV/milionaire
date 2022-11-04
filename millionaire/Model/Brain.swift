@@ -18,14 +18,14 @@ class Brain {
     
     //какой пак сложности сейчас используется
     private var currentQuestionPack: QuestionsLevel {
-        if currentLevel <= easyLevel {
-            return EasyQuestions()
+        if currentLevel < easyLevel {
+            return easyQuestionsData
         }
-        else if currentLevel <= mediumLevel {
-            return MediumQuestions()
+        else if currentLevel < mediumLevel {
+            return mediumQuestionsData
         }
         else {
-            return HardQuestions()
+            return hardQuestuinsData
         }
     }
     
@@ -79,8 +79,8 @@ class Brain {
 
     
     //возвращает следующий вопрос/ответ для текущего уровня сложности
-    private func getNextQuestion() -> QuestionsAnswer {
-        return currentQuestionPack.getQuestion()
+    private func goNextQuestion() {
+        currentQuestionPack.getQuestion()
     }
 
     //возвращает сколько денег сейчас у игрока
@@ -89,17 +89,24 @@ class Brain {
     }
     
     func getCurrentQuestionPack() -> QuestionsAnswer {
-        currentQuestionPack.currentQuestion ?? getNextQuestion()
+        if currentQuestionPack.currentQuestion != nil {
+            return currentQuestionPack.currentQuestion!
+        }
+        else {
+            goNextQuestion()
+            return currentQuestionPack.currentQuestion!
+        }
         
     }
     
     //переводит игрока на след уровень
-    private func gotoNextLevel() {
+    func gotoNextLevel() {
         if currentLevel != 0 {
             levels[currentLevel-1].currentQuestion = false
         }
         levels[currentLevel].currentQuestion = true
         currentLevel += 1
+        goNextQuestion()
     }
     
     

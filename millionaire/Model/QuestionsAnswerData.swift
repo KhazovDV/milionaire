@@ -8,7 +8,7 @@ class QuestionsLevel {
     var currentQuestion: QuestionsAnswer?
     
     //метод возвращает неиспользованные вопросы
-    func getQuestion() -> QuestionsAnswer{
+    func getQuestion(){
         var unusedQuestion: QuestionsAnswer?
                 
         for (i, question) in dataQuestionsAnswers.enumerated() {
@@ -22,7 +22,6 @@ class QuestionsLevel {
         let choosedQuestion = unusedQuestion != nil ? unusedQuestion! : QuestionsAnswer(question: "No more Questions", answers: ["No more Questions", "No more Questions", "No more Questions", "No more Questions"], correctAnswer: "No more Questions", used: false)
         currentQuestion = choosedQuestion
         
-        return choosedQuestion
     }
     
     func getCurrentQuestionData() -> QuestionsAnswer {
