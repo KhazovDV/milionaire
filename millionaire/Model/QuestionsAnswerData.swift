@@ -39,9 +39,13 @@ class QuestionsLevel {
 class EasyQuestions: QuestionsLevel {
     init() {
         super.init(dataForQuestions: [
-            QuestionsAnswer(question: "My country name?", answers: ["1", "2", "3", "4"], correctAnswer: "1", used: false),
-            QuestionsAnswer(question: "My age?", answers: ["10", "11", "12", "13"], correctAnswer: "10", used: false),
-            QuestionsAnswer(question: "Who is ur daddy?", answers: ["war3", "q3", "dota", "wow",], correctAnswer: "war3", used: false)
+            QuestionsAnswer(question: "My country name?", answers: ["US", "UK", "RU", "CA"], correctAnswer: "RU"),
+            QuestionsAnswer(question: "My lang?", answers: ["C++", "JS", "Swift", "COBOL"], correctAnswer: "Swift"),
+            QuestionsAnswer(question: "Who is ur daddy?", answers: ["war3", "q3", "dota", "wow",], correctAnswer: "war3"),
+            QuestionsAnswer(question: "My planet?", answers: ["Mars", "Saturn", "Jupiter", "Earth"], correctAnswer: "Earth"),
+            QuestionsAnswer(question: "Who was one of founder of Apple?", answers: ["Steave Jobs", "George Bush", "Bill Clinton", "Joseph Stalin"], correctAnswer: "Steave Jobs"),
+            QuestionsAnswer(question: "My city name?", answers: ["NY", "Moscow", "LA", "Tokyo"], correctAnswer: "Moscow"),
+            QuestionsAnswer(question: "Who is John Galt?", answers: ["John Galt", "Henry Rearden", "Dagny Taggart", "Francisco d'Anconia"], correctAnswer: "John Galt")
         ].shuffled()
                    )
     }

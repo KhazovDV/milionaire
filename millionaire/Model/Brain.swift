@@ -30,7 +30,7 @@ class Brain {
     }
     
     var levels = [
-        LevelMoneyGuaranteeWin(level: 0, money: "Start of game"),
+        //LevelMoneyGuaranteeWin(level: 0, money: "Start of game"),
         LevelMoneyGuaranteeWin(level: 1, money: "100₽"),
         LevelMoneyGuaranteeWin(level: 2, money: "200₽"),
         LevelMoneyGuaranteeWin(level: 3, money: "300₽"),
@@ -48,10 +48,38 @@ class Brain {
         LevelMoneyGuaranteeWin(level: 15, money: "1,000,000₽", win: true)
 
     ]
+    
+    var lifeLines = [
+        LifeLine(name: .fiftyFifty, percents: 50),
+        LifeLine(name: .askTheAudience, percents: 70),
+        LifeLine(name: .rightToMakeMistakes, percents: 100)
+        ]
+    
+    
+    func activateLifeLine(userChoose lifelineChoosen: LifeLine) {
+        for (i, currentLifeline) in lifeLines.enumerated() {
+            if currentLifeline.name == lifelineChoosen.name {
+                lifeLines[i].activeNow = true
+                lifeLines[i].available = .notAvailable
+            }
+        }
+    }
+    
+    func fiftyFifty() -> QuestionsAnswer {
+        var allAnswers = currentQuestionPack.currentQuestion!.answers
+        let correctAnswer = currentQuestionPack.currentQuestion!.correctAnswer
+        let oneIncorectAnswer =  allAnswers.filter {$0 != correctAnswer}.randomElement()!
+        
+        for (i, answer) in allAnswers.enumerated() where answer != oneIncorectAnswer && answer != correctAnswer {
+            allAnswers[i] = ""
+        }
+        return currentQuestionPack.currentQuestion!
+    }
+        
 
     
     //возвращает следующий вопрос/ответ для текущего уровня сложности
-    func getNextQuestion() -> QuestionsAnswer {
+    private func getNextQuestion() -> QuestionsAnswer {
         return currentQuestionPack.getQuestion()
     }
 
@@ -60,19 +88,18 @@ class Brain {
         levels[currentLevel].money
     }
     
-    //переводит игрока на след уровень
-    private func gotoNextLevel() {
-        levels[currentLevel-1].currentQuestion = false
-        levels[currentLevel].currentQuestion = true
-        currentLevel += 1
-    }
-    
-    private func wrongAnswer() {
+    func getCurrentQuestionPack() -> QuestionsAnswer {
+        currentQuestionPack.currentQuestion ?? getNextQuestion()
         
     }
     
-    private func correctAnswer() {
-        gotoNextLevel()
+    //переводит игрока на след уровень
+    private func gotoNextLevel() {
+        if currentLevel != 0 {
+            levels[currentLevel-1].currentQuestion = false
+        }
+        levels[currentLevel].currentQuestion = true
+        currentLevel += 1
     }
     
     
@@ -84,6 +111,16 @@ class Brain {
         isUserRight ? correctAnswer() : wrongAnswer()
         
         return(isUserRight, answer)
+    }
+    
+    //если игрок ответил не верно
+    private func wrongAnswer() {
+        
+    }
+    
+    //игрок ответил верно
+    private func correctAnswer() {
+        gotoNextLevel()
     }
 }
 

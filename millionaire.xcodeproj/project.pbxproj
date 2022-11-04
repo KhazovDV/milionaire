@@ -15,9 +15,10 @@
 		9E1A41CA29102A9D009D16BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1A41C829102A9D009D16BD /* LaunchScreen.storyboard */; };
 		9E1A41D529102B67009D16BD /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1A41D429102B67009D16BD /* Brain.swift */; };
 		9E58F76F29157B0A004800A9 /* ViewControllerTest3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E58F76E29157B0A004800A9 /* ViewControllerTest3.swift */; };
+		AA45BEEE29158B6E0039CE1A /* GameRulesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA45BEED29158B6E0039CE1A /* GameRulesVC.swift */; };
+		AA45BEF1291591100039CE1A /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA45BEF0291591100039CE1A /* TestVC.swift */; };
 		AA4829D02914292F0071452F /* LevelMoneyGuaranteeWin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4829CF2914292F0071452F /* LevelMoneyGuaranteeWin.swift */; };
 		AA4829D229143C8A0071452F /* Lifelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4829D129143C8A0071452F /* Lifelines.swift */; };
-		AA73CDD62913E080000A7894 /* GameRulesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA73CDD52913E080000A7894 /* GameRulesVC.swift */; };
 		AA73CDD82913F911000A7894 /* QuestionsAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA73CDD72913F911000A7894 /* QuestionsAnswer.swift */; };
 		AA73CDDA2913FE51000A7894 /* QuestionsAnswerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA73CDD92913FE51000A7894 /* QuestionsAnswerData.swift */; };
 /* End PBXBuildFile section */
@@ -33,9 +34,10 @@
 		9E1A41CB29102A9D009D16BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E1A41D429102B67009D16BD /* Brain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
 		9E58F76E29157B0A004800A9 /* ViewControllerTest3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTest3.swift; sourceTree = "<group>"; };
+		AA45BEED29158B6E0039CE1A /* GameRulesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRulesVC.swift; sourceTree = "<group>"; };
+		AA45BEF0291591100039CE1A /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		AA4829CF2914292F0071452F /* LevelMoneyGuaranteeWin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelMoneyGuaranteeWin.swift; sourceTree = "<group>"; };
 		AA4829D129143C8A0071452F /* Lifelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lifelines.swift; sourceTree = "<group>"; };
-		AA73CDD52913E080000A7894 /* GameRulesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRulesVC.swift; sourceTree = "<group>"; };
 		AA73CDD72913F911000A7894 /* QuestionsAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsAnswer.swift; sourceTree = "<group>"; };
 		AA73CDD92913FE51000A7894 /* QuestionsAnswerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsAnswerData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,6 +58,7 @@
 			children = (
 				9E1A41BC29102A9B009D16BD /* millionaire */,
 				9E1A41BB29102A9B009D16BD /* Products */,
+				AA45BEEC29158B5F0039CE1A /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,8 +110,17 @@
 			children = (
 				9E1A41C129102A9B009D16BD /* ViewController.swift */,
 				9E58F76E29157B0A004800A9 /* ViewControllerTest3.swift */,
+				AA45BEED29158B6E0039CE1A /* GameRulesVC.swift */,
+				AA45BEF0291591100039CE1A /* TestVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		AA45BEEC29158B5F0039CE1A /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,13 +196,14 @@
 			files = (
 				9E1A41C229102A9B009D16BD /* ViewController.swift in Sources */,
 				AA4829D229143C8A0071452F /* Lifelines.swift in Sources */,
-				AA73CDD62913E080000A7894 /* GameRulesVC.swift in Sources */,
+				AA45BEEE29158B6E0039CE1A /* GameRulesVC.swift in Sources */,
 				9E1A41BE29102A9B009D16BD /* AppDelegate.swift in Sources */,
 				9E58F76F29157B0A004800A9 /* ViewControllerTest3.swift in Sources */,
 				AA4829D02914292F0071452F /* LevelMoneyGuaranteeWin.swift in Sources */,
 				9E1A41D529102B67009D16BD /* Brain.swift in Sources */,
 				AA73CDDA2913FE51000A7894 /* QuestionsAnswerData.swift in Sources */,
 				9E1A41C029102A9B009D16BD /* SceneDelegate.swift in Sources */,
+				AA45BEF1291591100039CE1A /* TestVC.swift in Sources */,
 				AA73CDD82913F911000A7894 /* QuestionsAnswer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
