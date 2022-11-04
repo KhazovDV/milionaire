@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TCO-ZT-Tet">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WOY-Fe-AGb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -74,7 +74,7 @@
         <!--View Controller Test3-->
         <scene sceneID="wkQ-Gi-Swn">
             <objects>
-                <viewController id="WOY-Fe-AGb" customClass="ViewControllerTest3" customModule="millionaire" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WOY-Fe-AGb" customClass="ViewControllerTest3" customModule="millionaire" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ptb-wm-tAm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,33 +97,21 @@
                                         <rect key="frame" x="169.5" y="10" width="75" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                        <connections>
-                                            <action selector="Answers:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="1Cd-5c-4JY"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZw-0w-cEz">
                                         <rect key="frame" x="169.5" y="59.5" width="75" height="34"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                        <connections>
-                                            <action selector="Answers:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="bqH-QS-vxF"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GI3-Sl-vMr">
                                         <rect key="frame" x="169.5" y="108.5" width="75" height="34"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                        <connections>
-                                            <action selector="Answers:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="HPN-bJ-IMf"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZS-PG-5SG">
                                         <rect key="frame" x="169.5" y="157.5" width="75" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                        <connections>
-                                            <action selector="Answers:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="4SI-56-dj5"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -156,7 +144,6 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
-                                            <action selector="HintFiftyButton:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="un3-Nu-gAD"/>
                                             <action selector="hintFiftyButton:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="uo0-9Y-faI"/>
                                         </connections>
                                     </button>
@@ -165,7 +152,6 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
-                                            <action selector="HintSeventeeButton:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="Yex-cb-el6"/>
                                             <action selector="hintSeventeeButton:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="FyE-eA-nhC"/>
                                         </connections>
                                     </button>
@@ -174,7 +160,6 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
-                                            <action selector="HintImmortalityButton:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="ccd-Ps-Fxf"/>
                                             <action selector="hintImmortalityButton:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="jbA-ct-LYh"/>
                                         </connections>
                                     </button>
@@ -183,7 +168,6 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
-                                            <action selector="HintTakeMoneyButton:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="flU-k6-4YD"/>
                                             <action selector="hintTakeMoneyButton:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="SnR-Dm-eHl"/>
                                         </connections>
                                     </button>
@@ -232,17 +216,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="answer0" destination="O45-3I-IYg" id="zea-zv-Dxg"/>
-                        <outlet property="answer1" destination="hZw-0w-cEz" id="oaW-gN-zsB"/>
-                        <outlet property="answer2" destination="GI3-Sl-vMr" id="fMz-HI-X4L"/>
-                        <outlet property="answer3" destination="RZS-PG-5SG" id="IEm-oV-Fkp"/>
                         <outlet property="questionsLabel" destination="YEE-P4-OFn" id="a4G-Sj-iYT"/>
-                        <outlet property="test" destination="Zpj-sm-ACw" id="hZk-K4-FYP"/>
                         <outlet property="timerLabel" destination="Zpj-sm-ACw" id="m1E-eI-m6V"/>
-                        <outletCollection property="answers" destination="O45-3I-IYg" collectionClass="NSMutableArray" id="R3X-eJ-em9"/>
-                        <outletCollection property="answers" destination="hZw-0w-cEz" collectionClass="NSMutableArray" id="swg-0n-CUC"/>
-                        <outletCollection property="answers" destination="GI3-Sl-vMr" collectionClass="NSMutableArray" id="Nyd-ys-KwK"/>
-                        <outletCollection property="answers" destination="RZS-PG-5SG" collectionClass="NSMutableArray" id="kdG-3n-iRR"/>
+                        <outletCollection property="answers" destination="O45-3I-IYg" collectionClass="NSMutableArray" id="My2-zg-sVk"/>
+                        <outletCollection property="answers" destination="hZw-0w-cEz" collectionClass="NSMutableArray" id="not-WN-V03"/>
+                        <outletCollection property="answers" destination="GI3-Sl-vMr" collectionClass="NSMutableArray" id="gY9-ZE-VJz"/>
+                        <outletCollection property="answers" destination="RZS-PG-5SG" collectionClass="NSMutableArray" id="h3B-iF-yDn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pli-FU-fyc" sceneMemberID="firstResponder"/>
