@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -9,26 +9,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller1-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="millionaire" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="73R-Cj-Kvq" userLabel="Botm">
-                                <rect key="frame" x="0.0" y="562" width="404" height="300"/>
+                                <rect key="frame" x="0.0" y="478" width="365" height="300"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03s-7b-i0D">
-                                        <rect key="frame" x="141.5" y="50" width="121" height="35"/>
+                                        <rect key="frame" x="122" y="50" width="121" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Начать игру">
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88y-dU-h19">
-                                        <rect key="frame" x="133.5" y="135" width="137" height="35"/>
+                                        <rect key="frame" x="114" y="135" width="137" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Правила игры">
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
@@ -47,7 +47,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="millionaire" translatesAutoresizingMaskIntoConstraints="NO" id="TH6-ny-OOw">
-                                <rect key="frame" x="82" y="48" width="250" height="514"/>
+                                <rect key="frame" x="82" y="47" width="211" height="431"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -68,16 +68,16 @@
             </objects>
             <point key="canvasLocation" x="-874" y="-15"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller3-->
         <scene sceneID="wkQ-Gi-Swn">
             <objects>
-                <viewController id="WOY-Fe-AGb" customClass="ViewController" customModule="millionaire" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WOY-Fe-AGb" customClass="ViewController3" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ptb-wm-tAm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YEE-P4-OFn">
-                                <rect key="frame" x="40" y="144" width="334" height="128"/>
+                                <rect key="frame" x="40" y="143" width="295" height="128"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="Sqv-gz-P7S"/>
@@ -88,25 +88,25 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ww-M9-d5a" userLabel="ButtonView">
-                                <rect key="frame" x="0.0" y="632" width="414" height="230"/>
+                                <rect key="frame" x="0.0" y="556" width="375" height="222"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O45-3I-IYg">
-                                        <rect key="frame" x="169.5" y="10" width="75" height="35"/>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O45-3I-IYg">
+                                        <rect key="frame" x="150" y="10" width="75" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZw-0w-cEz">
-                                        <rect key="frame" x="169.5" y="60" width="75" height="35"/>
+                                        <rect key="frame" x="150" y="60" width="75" height="34"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GI3-Sl-vMr">
-                                        <rect key="frame" x="169.5" y="110" width="75" height="35"/>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GI3-Sl-vMr">
+                                        <rect key="frame" x="150" y="109" width="75" height="28.666666666666657"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZS-PG-5SG">
-                                        <rect key="frame" x="169.5" y="160" width="75" height="35"/>
+                                        <rect key="frame" x="150" y="152.66666666666663" width="75" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                     </button>
@@ -133,17 +133,71 @@
                                     <constraint firstItem="RZS-PG-5SG" firstAttribute="top" secondItem="GI3-Sl-vMr" secondAttribute="bottom" constant="15" id="wNF-Vs-pyl"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmZ-K7-Ltl" userLabel="HintsButton">
+                                <rect key="frame" x="0.0" y="556" width="375" height="0.0"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFr-Om-O1l">
+                                        <rect key="frame" x="20" y="-17.333333333333371" width="75" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxe-WH-3Bw">
+                                        <rect key="frame" x="110" y="-17.333333333333371" width="75" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXf-ln-P8I">
+                                        <rect key="frame" x="193" y="-17.333333333333371" width="75" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbv-Jq-WVn">
+                                        <rect key="frame" x="283" y="-17.333333333333371" width="72" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="wbv-Jq-WVn" firstAttribute="centerY" secondItem="hmZ-K7-Ltl" secondAttribute="centerY" id="23a-q5-bmz"/>
+                                    <constraint firstItem="YFr-Om-O1l" firstAttribute="leading" secondItem="hmZ-K7-Ltl" secondAttribute="leading" constant="20" id="2Zc-n7-s9X"/>
+                                    <constraint firstItem="Uxe-WH-3Bw" firstAttribute="centerY" secondItem="hmZ-K7-Ltl" secondAttribute="centerY" id="4hV-L0-bev"/>
+                                    <constraint firstItem="wbv-Jq-WVn" firstAttribute="leading" secondItem="eXf-ln-P8I" secondAttribute="trailing" constant="15" id="DLq-mQ-Ndi"/>
+                                    <constraint firstItem="eXf-ln-P8I" firstAttribute="centerY" secondItem="hmZ-K7-Ltl" secondAttribute="centerY" id="GAC-wk-jYb"/>
+                                    <constraint firstItem="wbv-Jq-WVn" firstAttribute="leading" secondItem="eXf-ln-P8I" secondAttribute="trailing" constant="15" id="GXR-tv-Cx7"/>
+                                    <constraint firstItem="eXf-ln-P8I" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Uxe-WH-3Bw" secondAttribute="trailing" constant="8" symbolic="YES" id="OIz-xo-ohj"/>
+                                    <constraint firstItem="YFr-Om-O1l" firstAttribute="centerY" secondItem="hmZ-K7-Ltl" secondAttribute="centerY" id="XdA-RY-lcj"/>
+                                    <constraint firstAttribute="trailing" secondItem="wbv-Jq-WVn" secondAttribute="trailing" constant="20" id="i3a-nL-RAD"/>
+                                    <constraint firstItem="Uxe-WH-3Bw" firstAttribute="leading" secondItem="YFr-Om-O1l" secondAttribute="trailing" constant="15" id="qqz-2a-isR"/>
+                                    <constraint firstItem="Uxe-WH-3Bw" firstAttribute="leading" secondItem="YFr-Om-O1l" secondAttribute="trailing" constant="15" id="rg4-1d-zBU"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zpj-sm-ACw">
+                                <rect key="frame" x="166.66666666666666" y="395.66666666666669" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JM5-fy-yFe"/>
                         <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="JM5-fy-yFe" firstAttribute="trailing" secondItem="YEE-P4-OFn" secondAttribute="trailing" constant="40" id="3Ng-SI-Dxl"/>
                             <constraint firstItem="8Ww-M9-d5a" firstAttribute="leading" secondItem="JM5-fy-yFe" secondAttribute="leading" id="5oo-0N-eCe"/>
+                            <constraint firstItem="hmZ-K7-Ltl" firstAttribute="centerX" secondItem="ptb-wm-tAm" secondAttribute="centerX" id="B4V-Nu-pvQ"/>
                             <constraint firstItem="YEE-P4-OFn" firstAttribute="centerX" secondItem="ptb-wm-tAm" secondAttribute="centerX" id="KOl-fW-Ebn"/>
+                            <constraint firstItem="8Ww-M9-d5a" firstAttribute="top" secondItem="hmZ-K7-Ltl" secondAttribute="bottom" id="Kqf-4z-g4W"/>
+                            <constraint firstItem="8Ww-M9-d5a" firstAttribute="top" secondItem="hmZ-K7-Ltl" secondAttribute="bottom" id="PLY-HZ-Bvg"/>
                             <constraint firstItem="JM5-fy-yFe" firstAttribute="trailing" secondItem="8Ww-M9-d5a" secondAttribute="trailing" id="QhL-M5-cZs"/>
+                            <constraint firstItem="hmZ-K7-Ltl" firstAttribute="leading" secondItem="JM5-fy-yFe" secondAttribute="leading" id="dzx-Np-co5"/>
+                            <constraint firstItem="hmZ-K7-Ltl" firstAttribute="trailing" secondItem="JM5-fy-yFe" secondAttribute="trailing" id="eQm-d7-70C"/>
                             <constraint firstItem="YEE-P4-OFn" firstAttribute="top" secondItem="JM5-fy-yFe" secondAttribute="top" constant="96" id="hg1-e3-Aah"/>
                             <constraint firstItem="JM5-fy-yFe" firstAttribute="bottom" secondItem="8Ww-M9-d5a" secondAttribute="bottom" id="i54-ZW-eKB"/>
+                            <constraint firstItem="Zpj-sm-ACw" firstAttribute="centerX" secondItem="ptb-wm-tAm" secondAttribute="centerX" id="iN8-Jw-VWl"/>
+                            <constraint firstItem="Zpj-sm-ACw" firstAttribute="centerY" secondItem="ptb-wm-tAm" secondAttribute="centerY" id="kxl-IW-YFA"/>
                             <constraint firstItem="YEE-P4-OFn" firstAttribute="leading" secondItem="JM5-fy-yFe" secondAttribute="leading" constant="40" id="loC-xt-rqW"/>
+                            <constraint firstItem="hmZ-K7-Ltl" firstAttribute="top" secondItem="YEE-P4-OFn" secondAttribute="bottom" constant="285" id="uML-CB-b3s"/>
+                            <constraint firstItem="8Ww-M9-d5a" firstAttribute="top" secondItem="hmZ-K7-Ltl" secondAttribute="bottom" id="w5F-e5-02G"/>
                         </constraints>
                     </view>
                 </viewController>
