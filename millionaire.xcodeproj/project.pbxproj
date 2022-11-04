@@ -14,6 +14,7 @@
 		9E1A41C729102A9D009D16BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E1A41C629102A9D009D16BD /* Assets.xcassets */; };
 		9E1A41CA29102A9D009D16BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1A41C829102A9D009D16BD /* LaunchScreen.storyboard */; };
 		9E1A41D529102B67009D16BD /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1A41D429102B67009D16BD /* Brain.swift */; };
+		9E58F76F29157B0A004800A9 /* ViewControllerTest3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E58F76E29157B0A004800A9 /* ViewControllerTest3.swift */; };
 		AA4829D02914292F0071452F /* LevelMoneyGuaranteeWin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4829CF2914292F0071452F /* LevelMoneyGuaranteeWin.swift */; };
 		AA4829D229143C8A0071452F /* Lifelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4829D129143C8A0071452F /* Lifelines.swift */; };
 		AA73CDD62913E080000A7894 /* GameRulesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA73CDD52913E080000A7894 /* GameRulesVC.swift */; };
@@ -31,6 +32,7 @@
 		9E1A41C929102A9D009D16BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E1A41CB29102A9D009D16BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E1A41D429102B67009D16BD /* Brain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
+		9E58F76E29157B0A004800A9 /* ViewControllerTest3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTest3.swift; sourceTree = "<group>"; };
 		AA4829CF2914292F0071452F /* LevelMoneyGuaranteeWin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelMoneyGuaranteeWin.swift; sourceTree = "<group>"; };
 		AA4829D129143C8A0071452F /* Lifelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lifelines.swift; sourceTree = "<group>"; };
 		AA73CDD52913E080000A7894 /* GameRulesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRulesVC.swift; sourceTree = "<group>"; };
@@ -104,7 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				9E1A41C129102A9B009D16BD /* ViewController.swift */,
-				AA73CDD52913E080000A7894 /* GameRulesVC.swift */,
+				9E58F76E29157B0A004800A9 /* ViewControllerTest3.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -184,6 +186,7 @@
 				AA4829D229143C8A0071452F /* Lifelines.swift in Sources */,
 				AA73CDD62913E080000A7894 /* GameRulesVC.swift in Sources */,
 				9E1A41BE29102A9B009D16BD /* AppDelegate.swift in Sources */,
+				9E58F76F29157B0A004800A9 /* ViewControllerTest3.swift in Sources */,
 				AA4829D02914292F0071452F /* LevelMoneyGuaranteeWin.swift in Sources */,
 				9E1A41D529102B67009D16BD /* Brain.swift in Sources */,
 				AA73CDDA2913FE51000A7894 /* QuestionsAnswerData.swift in Sources */,
