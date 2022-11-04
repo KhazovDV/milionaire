@@ -441,7 +441,6 @@
                                     <constraint firstItem="qxr-xa-z1c" firstAttribute="centerX" secondItem="MHd-mg-YIt" secondAttribute="centerX" id="Plr-un-XuJ"/>
                                     <constraint firstItem="8jL-yL-AmY" firstAttribute="top" secondItem="MHd-mg-YIt" secondAttribute="top" constant="150" id="PxP-BQ-bzQ"/>
                                     <constraint firstItem="Lsr-vs-XRa" firstAttribute="top" secondItem="cyx-4P-vzD" secondAttribute="bottom" constant="10" id="Rgp-Hs-veE"/>
-                                    <constraint firstItem="Lsr-vs-XRa" firstAttribute="top" secondItem="cyx-4P-vzD" secondAttribute="bottom" constant="10" id="RrP-wS-gaF"/>
                                     <constraint firstItem="1YN-0V-MGf" firstAttribute="centerX" secondItem="MHd-mg-YIt" secondAttribute="centerX" id="Rwa-IU-FZR"/>
                                     <constraint firstItem="qxr-xa-z1c" firstAttribute="top" secondItem="SgI-ti-OMN" secondAttribute="bottom" constant="10" id="SZd-kR-L3u"/>
                                     <constraint firstItem="ksd-NE-EqE" firstAttribute="top" secondItem="kAF-gR-s0c" secondAttribute="bottom" constant="10" id="Saj-7l-3IM"/>
@@ -464,7 +463,6 @@
                                     <constraint firstItem="VeR-pH-D7v" firstAttribute="top" secondItem="7V2-92-NDU" secondAttribute="bottom" constant="10" id="tTy-sd-fyA"/>
                                     <constraint firstItem="KK3-K2-INF" firstAttribute="top" secondItem="VeR-pH-D7v" secondAttribute="bottom" constant="10" id="v6E-iy-eIP"/>
                                     <constraint firstItem="cyx-4P-vzD" firstAttribute="top" secondItem="ksd-NE-EqE" secondAttribute="bottom" constant="10" id="vLg-VS-DQu"/>
-                                    <constraint firstItem="Lsr-vs-XRa" firstAttribute="top" secondItem="cyx-4P-vzD" secondAttribute="bottom" constant="1" id="wLn-fB-ofR"/>
                                     <constraint firstItem="7V2-92-NDU" firstAttribute="top" secondItem="8G3-3D-Lrr" secondAttribute="bottom" constant="10" id="xUl-MJ-z6T"/>
                                     <constraint firstItem="Lsr-vs-XRa" firstAttribute="centerX" secondItem="MHd-mg-YIt" secondAttribute="centerX" id="z2Q-1w-Njw"/>
                                     <constraint firstItem="ksd-NE-EqE" firstAttribute="top" secondItem="kAF-gR-s0c" secondAttribute="bottom" constant="10" id="zad-xM-Y9b"/>
