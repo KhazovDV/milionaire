@@ -13,18 +13,18 @@ class ViewControllerTest3: UIViewController {
     
     @IBOutlet weak var timerLabel: UILabel!
     
-    @IBAction func HintFiftyButton(_ sender: UIButton) {
+    @IBAction func hintFiftyButton(_ sender: UIButton) {
     }
-    @IBAction func HintSeventeeButton(_ sender: UIButton) {
-    }
-    
-    @IBAction func HintImmortalityButton(_ sender: UIButton) {
+    @IBAction func hintSeventeeButton(_ sender: UIButton) {
     }
     
-    @IBAction func HintTakeMoneyButton(_ sender: UIButton) {
+    @IBAction func hintImmortalityButton(_ sender: UIButton) {
     }
     
-    @IBAction func Answers(_ sender: UIButton) {
+    @IBAction func hintTakeMoneyButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func answers(_ sender: UIButton) {
     }
     
     
