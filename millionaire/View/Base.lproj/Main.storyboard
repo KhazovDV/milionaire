@@ -68,10 +68,10 @@
             </objects>
             <point key="canvasLocation" x="-874" y="-15"/>
         </scene>
-        <!--View Controller3-->
+        <!--View Controller Test3-->
         <scene sceneID="wkQ-Gi-Swn">
             <objects>
-                <viewController id="WOY-Fe-AGb" customClass="ViewController3" sceneMemberID="viewController">
+                <viewController id="WOY-Fe-AGb" customClass="ViewControllerTest3" customModule="millionaire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ptb-wm-tAm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,21 +94,33 @@
                                         <rect key="frame" x="169.5" y="10" width="75" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="Answers:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="1Cd-5c-4JY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZw-0w-cEz">
                                         <rect key="frame" x="169.5" y="60" width="75" height="34"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="Answers:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="bqH-QS-vxF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GI3-Sl-vMr">
                                         <rect key="frame" x="169.5" y="109" width="75" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="Answers:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="HPN-bJ-IMf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZS-PG-5SG">
                                         <rect key="frame" x="169.5" y="158.5" width="75" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="Answers:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="4SI-56-dj5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -140,21 +152,33 @@
                                         <rect key="frame" x="20" y="21" width="75" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="HintFiftyButton:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="un3-Nu-gAD"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxe-WH-3Bw">
                                         <rect key="frame" x="110" y="21" width="75" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="HintSeventeeButton:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="Yex-cb-el6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXf-ln-P8I">
                                         <rect key="frame" x="229" y="21" width="75" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="HintImmortalityButton:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="ccd-Ps-Fxf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbv-Jq-WVn">
                                         <rect key="frame" x="319" y="21" width="75" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="HintTakeMoneyButton:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="flU-k6-4YD"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -200,6 +224,10 @@
                             <constraint firstItem="8Ww-M9-d5a" firstAttribute="top" secondItem="hmZ-K7-Ltl" secondAttribute="bottom" id="w5F-e5-02G"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="questionsLabel" destination="YEE-P4-OFn" id="EFt-N8-meI"/>
+                        <outlet property="timerLabel" destination="Zpj-sm-ACw" id="m1E-eI-m6V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pli-FU-fyc" sceneMemberID="firstResponder"/>
             </objects>
