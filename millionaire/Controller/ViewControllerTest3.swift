@@ -24,9 +24,7 @@ class ViewControllerTest3: UIViewController {
     @IBAction func hintTakeMoneyButton(_ sender: UIButton) {
     }
     
-    @IBAction func answers(_ sender: UIButton) {
-    }
-    
+    @IBOutlet var answers: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
