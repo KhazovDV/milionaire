@@ -28,7 +28,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lym-be-gJu"/>
-                                            <segue destination="TCO-ZT-Tet" kind="presentation" modalPresentationStyle="fullScreen" id="6LL-wW-vPZ"/>
+                                            <segue destination="WOY-Fe-AGb" kind="presentation" modalPresentationStyle="fullScreen" id="Ymo-gl-ztP"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88y-dU-h19">
@@ -98,21 +98,33 @@
                                         <rect key="frame" x="173.5" y="10" width="67" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="answerButton:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="1ak-Mw-wh3"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZw-0w-cEz">
                                         <rect key="frame" x="173.5" y="56" width="67" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="answerButton:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="5ka-lk-Eaz"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GI3-Sl-vMr">
                                         <rect key="frame" x="173.5" y="102" width="67" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="answerButton:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="2S4-H5-4fp"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZS-PG-5SG">
                                         <rect key="frame" x="173.5" y="148" width="67" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="answerButton:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="Dce-d1-OBs"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93188983199999997" green="0.93188983199999997" blue="0.93188983199999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -217,12 +229,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="questionsLabel" destination="YEE-P4-OFn" id="a4G-Sj-iYT"/>
                         <outlet property="timerLabel" destination="Zpj-sm-ACw" id="m1E-eI-m6V"/>
-                        <outletCollection property="answers" destination="O45-3I-IYg" collectionClass="NSMutableArray" id="My2-zg-sVk"/>
-                        <outletCollection property="answers" destination="hZw-0w-cEz" collectionClass="NSMutableArray" id="not-WN-V03"/>
-                        <outletCollection property="answers" destination="GI3-Sl-vMr" collectionClass="NSMutableArray" id="gY9-ZE-VJz"/>
-                        <outletCollection property="answers" destination="RZS-PG-5SG" collectionClass="NSMutableArray" id="h3B-iF-yDn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pli-FU-fyc" sceneMemberID="firstResponder"/>

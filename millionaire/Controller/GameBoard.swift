@@ -30,16 +30,19 @@ class GameBoard: UIViewController {
     @IBOutlet weak var answer2: UIButton!
     @IBOutlet weak var answer3: UIButton!
     
+    
     @IBAction func answerButton(_ sender: UIButton) {
-        let allButtons = [answer0, answer1, answer2, answer3]
+//        let allButtons = [answer0, answer1, answer2, answer3]
         timer.invalidate()
         timerLabel.text = "30"
         secondsPassed = 0
         
+        
         timer = Timer.scheduledTimer(timeInterval: 1.0, target:self, selector: #selector(updateTimer), userInfo:nil, repeats: true)
-        let url = Bundle.main.url(forResource: "zvukTikanya", withExtension: "mp3")
+        let url = Bundle.main.url(forResource: "zvukTikanya1", withExtension: "mp3")
         player = try! AVAudioPlayer(contentsOf: url!)
         player.play()
+         
     }
     
     @objc func updateTimer() {
@@ -50,4 +53,6 @@ class GameBoard: UIViewController {
             
         }
     }
+     
+     
 }
