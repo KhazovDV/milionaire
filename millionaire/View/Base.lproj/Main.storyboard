@@ -171,7 +171,7 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
                                             <action selector="askAudience:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="klh-ob-2wn"/>
-                                            <segue destination="aAO-uc-gIc" kind="popoverPresentation" popoverAnchorView="Uxe-WH-3Bw" id="F3X-EX-uwV">
+                                            <segue destination="aAO-uc-gIc" kind="popoverPresentation" popoverAnchorView="Uxe-WH-3Bw" id="ejD-Pc-sFC">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                             </segue>
                                         </connections>
@@ -505,7 +505,7 @@
                     <connections>
                         <outlet property="audienceChoice" destination="3d9-a1-Let" id="qGU-n7-WMd"/>
                         <outlet property="popupView" destination="WqF-1d-Inv" id="hvw-Ut-VlG"/>
-                        <segue destination="Y9g-G7-72k" kind="presentation" identifier="fromPopupToScoreBoard" modalPresentationStyle="fullScreen" id="nqF-fb-nbj"/>
+                        <segue destination="Y9g-G7-72k" kind="showDetail" identifier="fromPopupToScoreBoard" id="nqF-fb-nbj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uFq-Bg-2fe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -514,7 +514,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nqF-fb-nbj"/>
+        <segue reference="NYf-So-3Ah"/>
         <segue reference="Ymo-gl-ztP"/>
     </inferredMetricsTieBreakers>
     <resources>
