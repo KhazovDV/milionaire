@@ -10,6 +10,7 @@ struct LifeLine {
         case fiftyFifty = "50:50"
         case askTheAudience = "Audience"
         case rightToMakeMistakes = "Mistake"
+        case takeMoneyNow = "Take money"
     }
     
     let name: LifelinesName

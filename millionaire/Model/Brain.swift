@@ -51,7 +51,8 @@ class Brain {
     
     var lifeLines = (fifty:LifeLine(name: .fiftyFifty),
                   audience: LifeLine(name: .askTheAudience),
-               makeMistake:LifeLine(name: .rightToMakeMistakes)
+               makeMistake:LifeLine(name: .rightToMakeMistakes),
+                     moneyNow: LifeLine(name: .takeMoneyNow)
         )
     
     

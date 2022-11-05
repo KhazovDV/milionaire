@@ -23,7 +23,7 @@ class TestVC: UIViewController {
     @IBOutlet weak var fiftyFifty: UIButton!
     @IBOutlet weak var askTheAudience: UIButton!
     @IBOutlet weak var rightToMakeMistakes: UIButton!
-    
+    @IBOutlet weak var takeMoneyNow: UIButton!
     
     let brain = Brain()
     
@@ -94,6 +94,10 @@ class TestVC: UIViewController {
         
         
         rightToMakeMistakes.setTitle(lifeLines.makeMistake.name.rawValue, for: .normal)
+        
+        takeMoneyNow.setTitle(lifeLines.moneyNow.name.rawValue, for: .normal)
+        
+        
         
     }
     
