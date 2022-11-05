@@ -40,5 +40,9 @@ class GameSound {
         player.play()
     }
     
+    func stop() {
+        player.stop()
+    }
+    
 }
 

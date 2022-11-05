@@ -25,7 +25,4 @@ class StartVC: UIViewController {
         let gameRulesVC = GameRulesVC()
         self.present(gameRulesVC, animated: true)
     }
-    
-
 }
-

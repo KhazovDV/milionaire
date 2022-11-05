@@ -39,12 +39,14 @@ class GameScoreVC: UIViewController {
         super.viewDidLoad()
         
         gameTimer.stop()
+        
+        gameSound.stop()
 
         
         if brain.currentGame == .loose {
             gameSound.lose()
         } else if brain.currentGame == .playing {
-            gameSound.correctAnswer()
+            brain.lifeLines.makeMistake.activeNow ? brain.lifeLines.makeMistake.activeNow = false : gameSound.correctAnswer()
         }
         
         
