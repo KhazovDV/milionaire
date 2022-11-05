@@ -88,6 +88,12 @@ class Brain {
         lifeLines.audience.available = .notAvailable
     }
     
+    func takeMoney() {
+        print(1, currentGame)
+        currentGame = .loose
+        print(2, currentGame)
+    }
+    
     
     /*
      почему тут не срабатывает строка lifeLines.audience.available = .notAvailable ?

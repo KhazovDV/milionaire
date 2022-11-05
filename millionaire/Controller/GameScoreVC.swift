@@ -25,10 +25,13 @@ class GameScoreVC: UIViewController {
     @IBOutlet weak var level14: UILabel!
     @IBOutlet weak var level15: UILabel!
     
+    @IBOutlet weak var nextQuestion: UIButton!
     
     var levels = [LevelMoneyGuaranteeWin]()
     
     var allLabels = [UILabel]()
+    
+    let brain = Brain.brainStart
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +43,10 @@ class GameScoreVC: UIViewController {
             label.textColor = levels[i].guaranteedLevel ? UIColor.blue : UIColor.black
             label.text = (levels[i].win ? "⭐ " : "") + label.text!
         }
+        
+        print(3, brain.currentGame)
+        
+        nextQuestion.isHidden = brain.currentGame == .loose ? true : false
         
 
     }

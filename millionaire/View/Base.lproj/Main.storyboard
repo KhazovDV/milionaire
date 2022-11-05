@@ -313,7 +313,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <segue destination="Y9g-G7-72k" kind="presentation" modalPresentationStyle="fullScreen" id="oyZ-b8-BSK"/>
+                                    <action selector="takeMoneyPressed:" destination="TCO-ZT-Tet" eventType="touchUpInside" id="uev-eT-hba"/>
+                                    <segue destination="Y9g-G7-72k" kind="presentation" modalPresentationStyle="fullScreen" id="lSk-nr-hcy"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XM7-pT-Att">
@@ -348,7 +349,7 @@
         <!--Game ScoreVC-->
         <scene sceneID="zGX-89-wrB">
             <objects>
-                <viewController id="Y9g-G7-72k" customClass="GameScoreVC" customModule="millionaire" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameScoreVC" id="Y9g-G7-72k" customClass="GameScoreVC" customModule="millionaire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OyN-Ml-4Vj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -451,15 +452,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hf9-tc-DE0">
-                                        <rect key="frame" x="38" y="823" width="94" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Play again!"/>
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="dPi-8m-DBt"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Qf-uG-Asc">
                                         <rect key="frame" x="140" y="723" width="136" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -467,6 +459,15 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Go next Question"/>
                                         <connections>
                                             <segue destination="TCO-ZT-Tet" kind="presentation" modalPresentationStyle="fullScreen" id="slM-rh-IH0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hf9-tc-DE0">
+                                        <rect key="frame" x="161" y="801" width="94" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Play again!"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="dPi-8m-DBt"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -544,6 +545,7 @@
                         <outlet property="level7" destination="xyS-M6-Uut" id="5ih-gk-bOB"/>
                         <outlet property="level8" destination="Lsr-vs-XRa" id="lkN-5d-SCx"/>
                         <outlet property="level9" destination="cyx-4P-vzD" id="e76-ep-Z7b"/>
+                        <outlet property="nextQuestion" destination="4Qf-uG-Asc" id="Z5u-GR-dfm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uZT-ee-mSI" sceneMemberID="firstResponder"/>
@@ -587,7 +589,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6LL-wW-vPZ"/>
+        <segue reference="lSk-nr-hcy"/>
+        <segue reference="slM-rh-IH0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="millionaire" width="512" height="512"/>

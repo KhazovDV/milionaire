@@ -44,6 +44,12 @@ class TestVC: UIViewController {
         updateUI()
     }
     
+    
+    @IBAction func takeMoneyPressed(_ sender: UIButton) {
+        brain.takeMoney()
+    }
+    
+    
     @IBAction func allButton(_ sender: UIButton) {
         let allButtons = [answer0, answer1, answer2, answer3]
         
@@ -96,6 +102,8 @@ class TestVC: UIViewController {
         takeMoneyNow.setTitle(lifeLines.moneyNow.name.rawValue, for: .normal)
         
     }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let popUpView = segue.destination as? PopupViewController {
