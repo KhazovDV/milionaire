@@ -89,6 +89,11 @@ class TestVC: UIViewController {
         answer2.setTitle(currentQuestion.answers[2], for: .normal)
         answer3.setTitle(currentQuestion.answers[3], for: .normal)
         
+        answer0.isHidden = currentQuestion.answers[0] == "" ? true : false
+        answer1.isHidden = currentQuestion.answers[1] == "" ? true : false
+        answer2.isHidden = currentQuestion.answers[2] == "" ? true : false
+        answer3.isHidden = currentQuestion.answers[3] == "" ? true : false
+        
         answer0.backgroundColor = .clear
         answer1.backgroundColor = .clear
         answer2.backgroundColor = .clear

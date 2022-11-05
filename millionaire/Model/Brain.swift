@@ -105,10 +105,11 @@ class Brain {
      */
     var audienceChoice: String {
         let hardQuestionPercent = 50
-        let otherQuestionPercent = 70
+        let otherQuestionPercent = 1
         let correctAnswer = currentQuestionPack.currentQuestion!.correctAnswer
         var allAnswers = currentQuestionPack.currentQuestion!.answers
         allAnswers.removeAll{$0 == correctAnswer}
+        allAnswers.removeAll{$0 == ""}
         
         let currentPercent = currentQuestionPack === hardQuestuinsData ? hardQuestionPercent : otherQuestionPercent
         let result = arc4random_uniform(100) > currentPercent ? allAnswers.randomElement()! : correctAnswer
