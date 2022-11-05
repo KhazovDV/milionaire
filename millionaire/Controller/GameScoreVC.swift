@@ -39,6 +39,8 @@ class GameScoreVC: UIViewController {
         
         if brain.currentGame == .loose {
             gameTimer.lose()
+        } else if brain.currentGame == .playing {
+            gameTimer.correctAnswer()
         }
         
         
