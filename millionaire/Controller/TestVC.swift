@@ -18,6 +18,7 @@ class TestVC: UIViewController {
     @IBOutlet weak var answer3: UIButton!
     @IBOutlet weak var money: UILabel!
     
+    @IBOutlet weak var testPopUp: UIButton!
     @IBOutlet weak var audienceChoice: UILabel!
     
     @IBOutlet weak var fiftyFifty: UIButton!
@@ -63,6 +64,16 @@ class TestVC: UIViewController {
     }
     
     
+    @IBAction func PopUpPressed(_ sender: UIButton) {
+        let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpVC") as! PopupViewController
+        self.addChild(popUpVC)
+        popUpVC.view.frame = self.view.frame
+        self.view.addSubview(popUpVC.view)
+
+        popUpVC.didMove(toParent: self)
+    }
+    
+    
     
     
     @objc func updateUI() {
@@ -97,7 +108,7 @@ class TestVC: UIViewController {
         audienceChoice.text = brain.audienceChoice
         
         
-        rightToMakeMistakes.setTitle("Mistake", for: .normal)
+        rightToMakeMistakes.setTitle(lifeLines.makeMistake.name.rawValue, for: .normal)
         
     }
      
