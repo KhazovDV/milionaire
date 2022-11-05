@@ -6,7 +6,7 @@ import AVFoundation
 var player: AVAudioPlayer!
 
 
-class GameTimer {
+class GameSound {
     
     //static var TimerStart = GameTimer()
     

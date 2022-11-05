@@ -32,15 +32,19 @@ class GameScoreVC: UIViewController {
     var allLabels = [UILabel]()
     
     let brain = Brain.brainStart
-    let gameTimer = GameTimer()
+    let gameSound = GameSound()
+    let gameTimer = GameTimer.startTimer
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        gameTimer.stop()
+
+        
         if brain.currentGame == .loose {
-            gameTimer.lose()
+            gameSound.lose()
         } else if brain.currentGame == .playing {
-            gameTimer.correctAnswer()
+            gameSound.correctAnswer()
         }
         
         

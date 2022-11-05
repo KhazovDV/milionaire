@@ -626,6 +626,7 @@
                     <connections>
                         <outlet property="audienceChoice" destination="3d9-a1-Let" id="qGU-n7-WMd"/>
                         <outlet property="popupView" destination="WqF-1d-Inv" id="hvw-Ut-VlG"/>
+                        <segue destination="Y9g-G7-72k" kind="presentation" identifier="fromPopupToScoreBoard" modalPresentationStyle="fullScreen" id="nqF-fb-nbj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uFq-Bg-2fe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -635,7 +636,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="F3X-EX-uwV"/>
-        <segue reference="NYf-So-3Ah"/>
+        <segue reference="nqF-fb-nbj"/>
         <segue reference="XTO-Tm-Ika"/>
     </inferredMetricsTieBreakers>
     <resources>
