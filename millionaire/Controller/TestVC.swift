@@ -62,7 +62,7 @@ class TestVC: UIViewController {
         let userAnswer = brain.checkAnswer(forAnswer: sender.currentTitle!)
         print(userAnswer, brain.currentLevel)
                 
-        sender.backgroundColor = userAnswer.isUserAnswerCorrect ? UIColor.green : UIColor.red
+        sender.backgroundColor = userAnswer.isUserAnswerCorrect ? .green : .red
         
         for button in allButtons {
             button!.backgroundColor = button!.currentTitle == userAnswer.answer ? UIColor.green : UIColor.red
@@ -70,12 +70,15 @@ class TestVC: UIViewController {
         
         
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        
+        performSegue(withIdentifier: "fromGameToScore", sender: nil)
     }
     
     
     @objc func updateUI() {
         let currentQuestion = brain.getCurrentQuestionPack()
         let lifeLines = brain.lifeLines
+        
         
         question.text = currentQuestion.question
         
@@ -110,15 +113,5 @@ class TestVC: UIViewController {
         
     }
     
-    
-
-    /*
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is GameScoreVC {
-            brain.takeMoney()
-     }
-     
-    }
-     */
      
 }

@@ -342,7 +342,7 @@
                         <outlet property="question" destination="E88-z5-Yhv" id="1z7-YS-w1c"/>
                         <outlet property="rightToMakeMistakes" destination="b4I-T8-2qJ" id="ZA1-Xi-uGW"/>
                         <outlet property="takeMoneyNow" destination="JgU-QT-FAN" id="EPM-To-2iw"/>
-                        <segue destination="Y9g-G7-72k" kind="presentation" identifier="fromGameToScore" id="YVn-pf-ROE"/>
+                        <segue destination="Y9g-G7-72k" kind="presentation" identifier="fromGameToScore" modalPresentationStyle="fullScreen" id="YVn-pf-ROE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70g-x8-cKN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -354,11 +354,11 @@
             <objects>
                 <viewController storyboardIdentifier="GameScoreVC" id="Y9g-G7-72k" customClass="GameScoreVC" customModule="millionaire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OyN-Ml-4Vj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MHd-mg-YIt" userLabel="MidlView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeR-pH-D7v">
                                         <rect key="frame" x="191.5" y="491" width="31" height="21"/>
@@ -592,6 +592,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="YVn-pf-ROE"/>
         <segue reference="slM-rh-IH0"/>
     </inferredMetricsTieBreakers>
     <resources>
