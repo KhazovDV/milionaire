@@ -8,7 +8,7 @@
 import UIKit
 import AVFoundation
 
-class ViewControllerTest3: UIViewController {
+class GameBoard: UIViewController {
     
     @IBOutlet weak var questionsLabel: UITextView!
     

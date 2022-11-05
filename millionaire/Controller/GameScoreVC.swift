@@ -49,7 +49,6 @@ class GameScoreVC: UIViewController {
                 
         nextQuestion.isHidden = brain.currentGame == .loose ? true : false
         
-
     }
     
 }
