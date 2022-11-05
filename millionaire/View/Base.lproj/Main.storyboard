@@ -157,7 +157,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
-                                            <action selector="hintFiftyButton:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="uo0-9Y-faI"/>
+                                            <action selector="fiftyFiftyPressed:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="CDM-Jk-sQF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxe-WH-3Bw">
@@ -165,7 +165,10 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
-                                            <action selector="hintSeventeeButton:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="FyE-eA-nhC"/>
+                                            <action selector="askAudience:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="klh-ob-2wn"/>
+                                            <segue destination="aAO-uc-gIc" kind="popoverPresentation" popoverAnchorView="Uxe-WH-3Bw" id="F3X-EX-uwV">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXf-ln-P8I">
@@ -173,7 +176,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
-                                            <action selector="hintImmortalityButton:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="jbA-ct-LYh"/>
+                                            <action selector="makeMistakePressed:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="mIb-yj-V0E"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbv-Jq-WVn">
@@ -181,7 +184,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
-                                            <action selector="hintTakeMoneyButton:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="SnR-Dm-eHl"/>
+                                            <action selector="takeMoneyPressed:" destination="WOY-Fe-AGb" eventType="touchUpInside" id="JPZ-Nx-rHg"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -229,7 +232,17 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="answer0" destination="O45-3I-IYg" id="kyb-ez-aZW"/>
+                        <outlet property="answer1" destination="hZw-0w-cEz" id="s0p-oO-F0l"/>
+                        <outlet property="answer2" destination="GI3-Sl-vMr" id="UII-uS-BRs"/>
+                        <outlet property="answer3" destination="RZS-PG-5SG" id="vaH-3X-VZq"/>
+                        <outlet property="askTheAudience" destination="Uxe-WH-3Bw" id="e9R-07-zko"/>
+                        <outlet property="fiftyFifty" destination="YFr-Om-O1l" id="yqP-eP-PUi"/>
+                        <outlet property="question" destination="YEE-P4-OFn" id="QLe-yH-gH8"/>
+                        <outlet property="rightToMakeMistakes" destination="eXf-ln-P8I" id="6qt-kx-aaO"/>
+                        <outlet property="takeMoneyNow" destination="wbv-Jq-WVn" id="XDd-gg-h3S"/>
                         <outlet property="timerLabel" destination="Zpj-sm-ACw" id="m1E-eI-m6V"/>
+                        <segue destination="Y9g-G7-72k" kind="presentation" identifier="fromGameToScoreBoard" modalPresentationStyle="fullScreen" id="NYf-So-3Ah"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pli-FU-fyc" sceneMemberID="firstResponder"/>
@@ -463,12 +476,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Qf-uG-Asc">
-                                        <rect key="frame" x="159" y="641" width="99" height="31"/>
+                                        <rect key="frame" x="146" y="641" width="126" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Go to game"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Go to questions"/>
                                         <connections>
-                                            <segue destination="TCO-ZT-Tet" kind="presentation" modalPresentationStyle="fullScreen" id="slM-rh-IH0"/>
+                                            <segue destination="WOY-Fe-AGb" kind="presentation" modalPresentationStyle="fullScreen" id="XTO-Tm-Ika"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hf9-tc-DE0">
@@ -610,7 +623,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="slM-rh-IH0"/>
+        <segue reference="PeZ-go-Uly"/>
+        <segue reference="NYf-So-3Ah"/>
+        <segue reference="XTO-Tm-Ika"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="millionaire" width="512" height="512"/>
