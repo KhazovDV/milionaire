@@ -16,7 +16,7 @@ class GameBoard: UIViewController {
     
     var timer = Timer()
     var player: AVAudioPlayer!
-    var totalTime = 29
+    var totalTime = 4
     var secondsPassed = 0
     
     @IBOutlet weak var question: UITextView!
@@ -68,6 +68,9 @@ class GameBoard: UIViewController {
             timerLabel.text = "\(totalTime)"
             //print("\(timeToAnswer)")
             totalTime -= 1
+        } else {
+            brain.instantLoose()
+            performSegue(withIdentifier: "fromGameToScoreBoard", sender: nil)
         }
     }
     

@@ -72,6 +72,7 @@ class Brain {
         return allGuarantedLevels
     }
     
+    
     var lifeLines = (fifty:LifeLine(name: .fiftyFifty),
                   audience: LifeLine(name: .askTheAudience),
                makeMistake:LifeLine(name: .rightToMakeMistakes),
@@ -185,6 +186,10 @@ class Brain {
         if let finalLevel = finalLevel {
             levels[finalLevel-1].currentQuestion = true
         }
+    }
+    
+    func instantLoose() {
+        wrongAnswer()
     }
     
     //если игрок ответил не верно
