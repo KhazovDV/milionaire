@@ -89,9 +89,7 @@ class Brain {
     }
     
     func takeMoney() {
-        print(1, currentGame)
         currentGame = .loose
-        print(2, currentGame)
     }
     
     

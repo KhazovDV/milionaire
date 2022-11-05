@@ -313,7 +313,6 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="takeMoneyPressed:" destination="TCO-ZT-Tet" eventType="touchUpInside" id="uev-eT-hba"/>
                                     <segue destination="Y9g-G7-72k" kind="presentation" modalPresentationStyle="fullScreen" id="lSk-nr-hcy"/>
                                 </connections>
                             </button>
