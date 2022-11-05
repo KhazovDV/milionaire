@@ -92,6 +92,11 @@ class Brain {
         currentGame = .loose
     }
     
+    func makeMistake() {
+        lifeLines.makeMistake.activeNow = true
+        lifeLines.makeMistake.available = .notAvailable
+    }
+    
     
     /*
      почему тут не срабатывает строка lifeLines.audience.available = .notAvailable ?
@@ -152,12 +157,16 @@ class Brain {
         
         isUserRight ? correctAnswer() : wrongAnswer()
         
+        lifeLines.makeMistake.activeNow = false
+        
         return(isUserRight, answer)
     }
     
     //если игрок ответил не верно
     private func wrongAnswer() {
-        currentGame = .loose
+        let userCanMistake = lifeLines.makeMistake.activeNow
+        
+        currentGame = userCanMistake ? .playing : .loose
     }
     
     //игрок ответил верно

@@ -306,6 +306,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="makeMistakePressed:" destination="TCO-ZT-Tet" eventType="touchUpInside" id="Jt5-Iu-N3E"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JgU-QT-FAN">
                                 <rect key="frame" x="284" y="652" width="78" height="31"/>
@@ -313,7 +316,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <segue destination="Y9g-G7-72k" kind="presentation" modalPresentationStyle="fullScreen" id="lSk-nr-hcy"/>
+                                    <action selector="takeMoneyPressed:" destination="TCO-ZT-Tet" eventType="touchUpInside" id="hCE-tv-MXW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XM7-pT-Att">
@@ -339,6 +342,7 @@
                         <outlet property="question" destination="E88-z5-Yhv" id="1z7-YS-w1c"/>
                         <outlet property="rightToMakeMistakes" destination="b4I-T8-2qJ" id="ZA1-Xi-uGW"/>
                         <outlet property="takeMoneyNow" destination="JgU-QT-FAN" id="EPM-To-2iw"/>
+                        <segue destination="Y9g-G7-72k" kind="presentation" identifier="fromGameToScore" id="YVn-pf-ROE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70g-x8-cKN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -350,11 +354,11 @@
             <objects>
                 <viewController storyboardIdentifier="GameScoreVC" id="Y9g-G7-72k" customClass="GameScoreVC" customModule="millionaire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OyN-Ml-4Vj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MHd-mg-YIt" userLabel="MidlView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeR-pH-D7v">
                                         <rect key="frame" x="191.5" y="491" width="31" height="21"/>
@@ -452,7 +456,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Qf-uG-Asc">
-                                        <rect key="frame" x="140" y="723" width="136" height="31"/>
+                                        <rect key="frame" x="140" y="641" width="136" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Go next Question"/>
@@ -461,7 +465,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hf9-tc-DE0">
-                                        <rect key="frame" x="161" y="801" width="94" height="31"/>
+                                        <rect key="frame" x="161" y="703" width="94" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Play again!"/>
@@ -588,7 +592,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6LL-wW-vPZ"/>
+        <segue reference="slM-rh-IH0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="millionaire" width="512" height="512"/>

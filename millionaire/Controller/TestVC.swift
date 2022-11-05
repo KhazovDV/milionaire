@@ -43,6 +43,17 @@ class TestVC: UIViewController {
         updateUI()
     }
         
+    @IBAction func makeMistakePressed(_ sender: UIButton) {
+        brain.makeMistake()
+        updateUI()
+        
+    }
+    
+    @IBAction func takeMoneyPressed(_ sender: UIButton) {
+        brain.takeMoney()
+        performSegue(withIdentifier: "fromGameToScore", sender: nil)
+    }
+    
     
     @IBAction func allButton(_ sender: UIButton) {
         let allButtons = [answer0, answer1, answer2, answer3]
@@ -65,7 +76,7 @@ class TestVC: UIViewController {
     @objc func updateUI() {
         let currentQuestion = brain.getCurrentQuestionPack()
         let lifeLines = brain.lifeLines
-                
+        
         question.text = currentQuestion.question
         
         money.text = brain.getCurrentMoney()
@@ -92,6 +103,8 @@ class TestVC: UIViewController {
         
         
         rightToMakeMistakes.setTitle(lifeLines.makeMistake.name.rawValue, for: .normal)
+        rightToMakeMistakes.backgroundColor = lifeLines.makeMistake.available == .available ? .clear : .gray
+        rightToMakeMistakes.isUserInteractionEnabled = lifeLines.makeMistake.available == .available ? true : false
         
         takeMoneyNow.setTitle(lifeLines.moneyNow.name.rawValue, for: .normal)
         
@@ -99,12 +112,13 @@ class TestVC: UIViewController {
     
     
 
-    
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let gameScoreView = segue.destination as? GameScoreVC {
+        if segue.destination is GameScoreVC {
             brain.takeMoney()
      }
      
     }
+     */
      
 }
