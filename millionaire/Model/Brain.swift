@@ -90,7 +90,6 @@ class Brain {
         
         let currentPercent = currentQuestionPack === hardQuestuinsData ? hardQuestionPercent : otherQuestionPercent
         let result = arc4random_uniform(100) > currentPercent ? allAnswers.randomElement()! : correctAnswer
-        lifeLines.audience.activeNow = false
         
         return result
     }

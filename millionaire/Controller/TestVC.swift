@@ -19,7 +19,6 @@ class TestVC: UIViewController {
     @IBOutlet weak var answer3: UIButton!
     @IBOutlet weak var money: UILabel!
     
-    @IBOutlet weak var testPopUp: UIButton!
     @IBOutlet weak var audienceChoice: UILabel!
     
     @IBOutlet weak var fiftyFifty: UIButton!
@@ -44,6 +43,7 @@ class TestVC: UIViewController {
     
     @IBAction func askAudience(_ sender: UIButton) {
         brain.askAudience()
+        print(brain.lifeLines.audience.available)
         updateUI()
     }
     
@@ -63,19 +63,6 @@ class TestVC: UIViewController {
         
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
     }
-    
-    
-    @IBAction func PopUpPressed(_ sender: UIButton) {
-        /*
-        let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpVC") as! PopupViewController
-        self.addChild(popUpVC)
-        popUpVC.view.frame = self.view.frame
-        self.view.addSubview(popUpVC.view)
-
-        popUpVC.didMove(toParent: self)
-         */
-    }
-    
     
     
     
@@ -108,13 +95,17 @@ class TestVC: UIViewController {
         askTheAudience.isUserInteractionEnabled = lifeLines.audience.available == .available ? true : false
         
         audienceChoice.isHidden = !lifeLines.audience.activeNow
-        audienceChoice.text = brain.audienceChoice
+        //audienceChoice.text = brain.audienceChoice
         
         
         rightToMakeMistakes.setTitle(lifeLines.makeMistake.name.rawValue, for: .normal)
         
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc2 = segue.destination as? PopupViewController {
+            vc2.answer = brain.audienceChoice
+        }
+    }
      
 }
