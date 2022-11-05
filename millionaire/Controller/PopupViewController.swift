@@ -4,7 +4,7 @@ class PopupViewController: UIViewController {
 
     @IBOutlet weak var popupView: UIView!
     
-    var answer = String()
+    let brain = Brain.brainStart
     
     @IBOutlet weak var audienceChoice: UILabel!
     override func viewDidLoad() {
@@ -14,8 +14,7 @@ class PopupViewController: UIViewController {
         
         popupView.layer.cornerRadius = 16
         
-        audienceChoice.text = answer
-        
+        audienceChoice.text = brain.audienceChoice
     }
          
 

@@ -47,6 +47,7 @@ class TestVC: UIViewController {
     
     @IBAction func takeMoneyPressed(_ sender: UIButton) {
         brain.takeMoney()
+        
     }
     
     
@@ -104,14 +105,10 @@ class TestVC: UIViewController {
     }
     
     
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let popUpView = segue.destination as? PopupViewController {
-            popUpView.answer = brain.audienceChoice
-        }
-        if let gameScoreView = segue.destination as? GameScoreVC {
-            gameScoreView.levels = brain.levels
-        }
+
     }
     
      
