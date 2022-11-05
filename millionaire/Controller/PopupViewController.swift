@@ -1,22 +1,23 @@
 import UIKit
 
 class PopupViewController: UIViewController {
-   // @IBOutlet weak var popupView: UIView!
 
     @IBOutlet weak var popupView: UIView!
     
+    
+    @IBOutlet weak var audienceChoice: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         popupView.layer.cornerRadius = 16
         view.backgroundColor = UIColor.black.withAlphaComponent(0.75)
-
         moveIn()
+        
     }
 
-    @IBAction func closePressed(_ sender: UIButton) {
-        moveOut()
-    }
+    //@IBAction func closePressed(_ sender: UIButton) {
+  //      moveOut()
+  //  }
 
 
     func moveIn() {

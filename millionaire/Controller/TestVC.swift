@@ -10,6 +10,7 @@ import UIKit
 class TestVC: UIViewController {
     
     
+    
     @IBOutlet weak var question: UILabel!
     
     @IBOutlet weak var answer0: UIButton!
@@ -65,12 +66,14 @@ class TestVC: UIViewController {
     
     
     @IBAction func PopUpPressed(_ sender: UIButton) {
+        /*
         let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpVC") as! PopupViewController
         self.addChild(popUpVC)
         popUpVC.view.frame = self.view.frame
         self.view.addSubview(popUpVC.view)
 
         popUpVC.didMove(toParent: self)
+         */
     }
     
     
@@ -111,5 +114,7 @@ class TestVC: UIViewController {
         rightToMakeMistakes.setTitle(lifeLines.makeMistake.name.rawValue, for: .normal)
         
     }
+    
+
      
 }

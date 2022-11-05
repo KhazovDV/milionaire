@@ -344,6 +344,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <action selector="PopUpPressed:" destination="TCO-ZT-Tet" eventType="touchUpInside" id="yQg-Y4-EwK"/>
+                                    <segue destination="aAO-uc-gIc" kind="popoverPresentation" popoverAnchorView="gsG-T6-Orn" id="htB-I2-0mr">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XM7-pT-Att">
@@ -380,7 +383,7 @@
             <objects>
                 <viewController storyboardIdentifier="popUpVC" id="aAO-uc-gIc" customClass="PopupViewController" customModule="millionaire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="alF-Vx-GT4">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WqF-1d-Inv">
@@ -397,20 +400,12 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZj-vD-GM1">
-                                <rect key="frame" x="165" y="359" width="61" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Close"/>
-                                <connections>
-                                    <action selector="closePressed:" destination="aAO-uc-gIc" eventType="touchUpInside" id="mby-sJ-2X9"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FCW-8F-fAl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="audienceChoice" destination="3d9-a1-Let" id="qGU-n7-WMd"/>
                         <outlet property="popupView" destination="WqF-1d-Inv" id="hvw-Ut-VlG"/>
                     </connections>
                 </viewController>
