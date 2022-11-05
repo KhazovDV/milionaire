@@ -46,9 +46,7 @@ class GameScoreVC: UIViewController {
             label.textColor = levels[i].guaranteedLevel ? UIColor.blue : UIColor.black
             label.text = (levels[i].win ? "⭐ " : "") + label.text!
         }
-        
-        print(3, brain.currentGame)
-        
+                
         nextQuestion.isHidden = brain.currentGame == .loose ? true : false
         
 

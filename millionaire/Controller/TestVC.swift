@@ -31,7 +31,6 @@ class TestVC: UIViewController {
         
         updateUI()
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func fiftyFiftyPressed(_ sender: UIButton) {
@@ -43,13 +42,7 @@ class TestVC: UIViewController {
         brain.askAudience()
         updateUI()
     }
-    
-    
-    @IBAction func takeMoneyPressed(_ sender: UIButton) {
-        brain.takeMoney()
         
-    }
-    
     
     @IBAction func allButton(_ sender: UIButton) {
         let allButtons = [answer0, answer1, answer2, answer3]
@@ -108,7 +101,10 @@ class TestVC: UIViewController {
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let gameScoreView = segue.destination as? GameScoreVC {
+            brain.takeMoney()
+     }
+     
     }
-    
      
 }

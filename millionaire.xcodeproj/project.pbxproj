@@ -16,7 +16,6 @@
 		9E1A41D529102B67009D16BD /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1A41D429102B67009D16BD /* Brain.swift */; };
 		9E58F76F29157B0A004800A9 /* ViewControllerTest3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E58F76E29157B0A004800A9 /* ViewControllerTest3.swift */; };
 		9EA529F22916754E00CD988E /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA529F12916754E00CD988E /* Timer.swift */; };
-		9EA529F62916885E00CD988E /* zvukTikanya.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9EA529F52916885E00CD988E /* zvukTikanya.mp3 */; };
 		AA45BEEE29158B6E0039CE1A /* GameRulesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA45BEED29158B6E0039CE1A /* GameRulesVC.swift */; };
 		AA45BEF1291591100039CE1A /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA45BEF0291591100039CE1A /* TestVC.swift */; };
 		AA45BEF3291642B90039CE1A /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA45BEF2291642B90039CE1A /* PopupViewController.swift */; };
@@ -39,7 +38,6 @@
 		9E1A41D429102B67009D16BD /* Brain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
 		9E58F76E29157B0A004800A9 /* ViewControllerTest3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTest3.swift; sourceTree = "<group>"; };
 		9EA529F12916754E00CD988E /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
-		9EA529F52916885E00CD988E /* zvukTikanya.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = zvukTikanya.mp3; path = ../../../.Trash/zvukTikanya.mp3; sourceTree = "<group>"; };
 		AA45BEED29158B6E0039CE1A /* GameRulesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRulesVC.swift; sourceTree = "<group>"; };
 		AA45BEF0291591100039CE1A /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		AA45BEF2291642B90039CE1A /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
@@ -90,7 +88,6 @@
 				9E1A41C629102A9D009D16BD /* Assets.xcassets */,
 				9E1A41C829102A9D009D16BD /* LaunchScreen.storyboard */,
 				9E1A41CB29102A9D009D16BD /* Info.plist */,
-				9EA529F52916885E00CD988E /* zvukTikanya.mp3 */,
 			);
 			path = millionaire;
 			sourceTree = "<group>";
@@ -197,7 +194,6 @@
 			files = (
 				9E1A41CA29102A9D009D16BD /* LaunchScreen.storyboard in Resources */,
 				9E1A41C729102A9D009D16BD /* Assets.xcassets in Resources */,
-				9EA529F62916885E00CD988E /* zvukTikanya.mp3 in Resources */,
 				9E1A41C529102A9B009D16BD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
