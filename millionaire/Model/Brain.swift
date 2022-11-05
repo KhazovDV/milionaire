@@ -62,6 +62,16 @@ class Brain {
 
     ]
     
+    private var guarantedLevels: [Int] {
+        var allGuarantedLevels = [Int]()
+        for level in levels {
+            if level.guaranteedLevel {
+                allGuarantedLevels.append(level.level)
+            }
+        }
+        return allGuarantedLevels
+    }
+    
     var lifeLines = (fifty:LifeLine(name: .fiftyFifty),
                   audience: LifeLine(name: .askTheAudience),
                makeMistake:LifeLine(name: .rightToMakeMistakes),
@@ -97,6 +107,7 @@ class Brain {
         lifeLines.makeMistake.available = .notAvailable
     }
     
+    //ну, очень хреново сделано, но уже времени не было да и сил
     func makeMistakeOff() {
         lifeLines.makeMistake.activeNow = false
     }
@@ -120,7 +131,6 @@ class Brain {
         return result
     }
         
-
     
     //возвращает следующий вопрос/ответ для текущего уровня сложности
     private func goNextQuestion() {
@@ -164,11 +174,27 @@ class Brain {
         return(isUserRight, answer)
     }
     
+    private func setLevelToNearestGuarantedMoney() {
+        var finalLevel: Int?
+        levels[currentLevel-1].currentQuestion = false
+        for guarantLevel in guarantedLevels {
+            if currentLevel >= guarantLevel {
+                finalLevel = guarantLevel
+            }
+        }
+        print(finalLevel, currentLevel)
+        if let finalLevel = finalLevel {
+            levels[finalLevel-1].currentQuestion = true
+        }
+    }
+    
     //если игрок ответил не верно
     private func wrongAnswer() {
         let userCanMistake = lifeLines.makeMistake.activeNow
         
         currentGame = userCanMistake ? .playing : .loose
+        
+        if currentGame == .loose { setLevelToNearestGuarantedMoney() }
     }
     
     //игрок ответил верно

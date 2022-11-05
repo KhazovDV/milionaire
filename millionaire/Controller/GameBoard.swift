@@ -70,12 +70,10 @@ class GameBoard: UIViewController {
         player.play()
         
         let userAnswer = brain.checkAnswer(forAnswer: sender.currentTitle!)
-        print(userAnswer, brain.currentLevel)
                 
         sender.backgroundColor = userAnswer.isUserAnswerCorrect ? .green : .red
         
         
-        print(brain.lifeLines.makeMistake.available, brain.lifeLines.makeMistake.activeNow)
         for button in allButtons {
             if button!.currentTitle == brain.getCurrentQuestionPack().correctAnswer {
                 if brain.lifeLines.makeMistake.activeNow != true {
@@ -94,7 +92,7 @@ class GameBoard: UIViewController {
     @objc func updateTimer() {
         if timeToAnswer > 0 {
             timerLabel.text = "\(timeToAnswer)"
-            print("\(timeToAnswer)")
+            //print("\(timeToAnswer)")
             timeToAnswer -= 1
             
         }
