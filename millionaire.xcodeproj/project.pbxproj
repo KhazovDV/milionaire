@@ -48,6 +48,7 @@
 		AA4829D129143C8A0071452F /* Lifelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lifelines.swift; sourceTree = "<group>"; };
 		AA73CDD72913F911000A7894 /* QuestionsAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsAnswer.swift; sourceTree = "<group>"; };
 		AA73CDD92913FE51000A7894 /* QuestionsAnswerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsAnswerData.swift; sourceTree = "<group>"; };
+		AAD2074E2916904E00E61FD9 /* zvukTikanya.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = zvukTikanya.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +85,7 @@
 				9E1A41BF29102A9B009D16BD /* SceneDelegate.swift */,
 				9E1A41D129102AE1009D16BD /* Model */,
 				9E1A41D229102AF3009D16BD /* View */,
+				AAD2074D2916903F00E61FD9 /* Media */,
 				9E1A41D329102B05009D16BD /* Controller */,
 				9E1A41C629102A9D009D16BD /* Assets.xcassets */,
 				9E1A41C829102A9D009D16BD /* LaunchScreen.storyboard */,
@@ -125,6 +127,14 @@
 				AA45BEF429166C180039CE1A /* GameScoreVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		AAD2074D2916903F00E61FD9 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				AAD2074E2916904E00E61FD9 /* zvukTikanya.mp3 */,
+			);
+			path = Media;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
