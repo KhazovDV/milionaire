@@ -9,11 +9,15 @@ import UIKit
 
 class StartVC: UIViewController {
     
+
     
+    let brainReset: () = Brain.resetGame()
+    let brain = Brain.brainStart
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
         
     }
 

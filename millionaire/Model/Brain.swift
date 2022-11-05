@@ -2,7 +2,11 @@ import Foundation
 
 class Brain {
     
-    static let brainStart = Brain()
+    static var brainStart = Brain()
+    
+    static func resetGame() {
+        brainStart = Brain()
+    }
     
     //на каких уровнях какие по сложности вопросы
     private let easyLevel = 5
