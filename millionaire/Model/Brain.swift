@@ -176,13 +176,12 @@ class Brain {
     
     private func setLevelToNearestGuarantedMoney() {
         var finalLevel: Int?
-        levels[currentLevel-1].currentQuestion = false
+        if currentLevel != 0 { levels[currentLevel-1].currentQuestion = false }
         for guarantLevel in guarantedLevels {
             if currentLevel >= guarantLevel {
                 finalLevel = guarantLevel
             }
         }
-        print(finalLevel, currentLevel)
         if let finalLevel = finalLevel {
             levels[finalLevel-1].currentQuestion = true
         }
