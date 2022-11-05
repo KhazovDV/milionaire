@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewControllerTest3: UIViewController {
     
@@ -36,6 +37,9 @@ class ViewControllerTest3: UIViewController {
         secondsPassed = 0
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target:self, selector: #selector(updateTimer), userInfo:nil, repeats: true)
+        let url = Bundle.main.url(forResource: "zvukTikanya", withExtension: "mp3")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player.play()
     }
     
     @objc func updateTimer() {
@@ -43,6 +47,7 @@ class ViewControllerTest3: UIViewController {
             timerLabel.text = "\(timeToAnswer)"
             print("\(timeToAnswer)")
             timeToAnswer -= 1
+            
         }
     }
 }

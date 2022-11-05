@@ -32,9 +32,11 @@
 //        label.text = "\(counter)"
 
 import Foundation
+import AVFoundation
 
 var counter = 0
 var timer = Timer()
 var timeToAnswer = 30
 var secondsPassed = 30
 var totalTime = 0
+var player: AVAudioPlayer!
