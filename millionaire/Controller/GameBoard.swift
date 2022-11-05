@@ -11,6 +11,7 @@ import AVFoundation
 class GameBoard: UIViewController {
     
     let brain = Brain.brainStart
+    let gameTimer = GameTimer.TimerStart
     
     @IBOutlet weak var question: UITextView!
     
@@ -59,15 +60,16 @@ class GameBoard: UIViewController {
     @IBAction func answerButton(_ sender: UIButton) {
         let allButtons = [answer0, answer1, answer2, answer3]
         
+        /*
         timer.invalidate()
         timerLabel.text = "30"
         secondsPassed = 0
-        
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target:self, selector: #selector(updateTimer), userInfo:nil, repeats: true)
         let url = Bundle.main.url(forResource: "zvukTikanya1", withExtension: "mp3")
         player = try! AVAudioPlayer(contentsOf: url!)
         player.play()
+         */
         
         let userAnswer = brain.checkAnswer(forAnswer: sender.currentTitle!)
                 
@@ -83,12 +85,12 @@ class GameBoard: UIViewController {
             }
         }
         
-        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
-        
+        Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
         performSegue(withIdentifier: "fromGameToScoreBoard", sender: nil)
          
     }
     
+    /*
     @objc func updateTimer() {
         if timeToAnswer > 0 {
             timerLabel.text = "\(timeToAnswer)"
@@ -97,8 +99,12 @@ class GameBoard: UIViewController {
             
         }
     }
+     */
     
     @objc func updateUI() {
+        
+        gameTimer.playingGame()
+        
         let currentQuestion = brain.getCurrentQuestionPack()
         let lifeLines = brain.lifeLines
         

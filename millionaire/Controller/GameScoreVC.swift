@@ -32,9 +32,15 @@ class GameScoreVC: UIViewController {
     var allLabels = [UILabel]()
     
     let brain = Brain.brainStart
+    let gameTimer = GameTimer.TimerStart
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if brain.currentGame == .loose {
+            gameTimer.lose()
+        }
+        
         
         levels = brain.levels
         
