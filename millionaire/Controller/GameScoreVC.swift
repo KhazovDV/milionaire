@@ -8,11 +8,30 @@
 import UIKit
 
 class GameScoreVC: UIViewController {
-
+    
+    @IBOutlet weak var level1: UILabel!
+    @IBOutlet weak var level2: UILabel!
+    @IBOutlet weak var level3: UILabel!
+    @IBOutlet weak var level4: UILabel!
+    @IBOutlet weak var level5: UILabel!
+    @IBOutlet weak var level6: UILabel!
+    @IBOutlet weak var level7: UILabel!
+    @IBOutlet weak var level8: UILabel!
+    @IBOutlet weak var level9: UILabel!
+    @IBOutlet weak var level10: UILabel!
+    @IBOutlet weak var level11: UILabel!
+    @IBOutlet weak var level12: UILabel!
+    @IBOutlet weak var level13: UILabel!
+    @IBOutlet weak var level14: UILabel!
+    @IBOutlet weak var level15: UILabel!
+    
+    
+    var levels = [LevelMoneyGuaranteeWin]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        print(levels)
     }
     
 

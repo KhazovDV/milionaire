@@ -519,6 +519,23 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="R8r-rk-4GY"/>
+                    <connections>
+                        <outlet property="level1" destination="1YN-0V-MGf" id="3lI-3I-Zjd"/>
+                        <outlet property="level10" destination="ksd-NE-EqE" id="MQ5-Ob-juf"/>
+                        <outlet property="level11" destination="kAF-gR-s0c" id="iW4-nb-BYE"/>
+                        <outlet property="level12" destination="qxr-xa-z1c" id="kNc-2H-MD0"/>
+                        <outlet property="level13" destination="SgI-ti-OMN" id="OND-Iv-VTM"/>
+                        <outlet property="level14" destination="rk8-C6-krU" id="xOL-rz-zUQ"/>
+                        <outlet property="level15" destination="8jL-yL-AmY" id="xKW-tv-kge"/>
+                        <outlet property="level2" destination="WKI-jV-npG" id="mTo-UT-NDT"/>
+                        <outlet property="level3" destination="KK3-K2-INF" id="5Th-py-8Kx"/>
+                        <outlet property="level4" destination="VeR-pH-D7v" id="7EW-l4-lY4"/>
+                        <outlet property="level5" destination="7V2-92-NDU" id="BVI-82-ppa"/>
+                        <outlet property="level6" destination="8G3-3D-Lrr" id="tMM-V0-5fH"/>
+                        <outlet property="level7" destination="xyS-M6-Uut" id="5ih-gk-bOB"/>
+                        <outlet property="level8" destination="Lsr-vs-XRa" id="lkN-5d-SCx"/>
+                        <outlet property="level9" destination="cyx-4P-vzD" id="e76-ep-Z7b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uZT-ee-mSI" sceneMemberID="firstResponder"/>
             </objects>

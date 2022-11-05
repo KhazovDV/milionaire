@@ -67,7 +67,7 @@ class TestVC: UIViewController {
     @objc func updateUI() {
         let currentQuestion = brain.getCurrentQuestionPack()
         let lifeLines = brain.lifeLines
-        
+                
         question.text = currentQuestion.question
         
         money.text = brain.getCurrentMoney()
@@ -102,8 +102,11 @@ class TestVC: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc2 = segue.destination as? PopupViewController {
-            vc2.answer = brain.audienceChoice
+        if let popUpView = segue.destination as? PopupViewController {
+            popUpView.answer = brain.audienceChoice
+        }
+        if let gameScoreView = segue.destination as? GameScoreVC {
+            gameScoreView.levels = brain.levels
         }
     }
      
