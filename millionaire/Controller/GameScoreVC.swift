@@ -32,7 +32,7 @@ class GameScoreVC: UIViewController {
     var allLabels = [UILabel]()
     
     let brain = Brain.brainStart
-    let gameTimer = GameTimer.TimerStart
+    let gameTimer = GameTimer()
     
     override func viewDidLoad() {
         super.viewDidLoad()

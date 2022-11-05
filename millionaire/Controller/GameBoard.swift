@@ -11,7 +11,7 @@ import AVFoundation
 class GameBoard: UIViewController {
     
     let brain = Brain.brainStart
-    let gameTimer = GameTimer.TimerStart
+    let gameTimer = GameTimer()
     
     
     var timer = Timer()
@@ -59,6 +59,7 @@ class GameBoard: UIViewController {
         super.viewDidLoad()
         
         updateUI()
+        gameTimer.playingGame()
         timer = Timer.scheduledTimer(timeInterval: 1.0, target:self, selector: #selector(updateTimer), userInfo:nil, repeats: true)
 
     }
@@ -66,11 +67,10 @@ class GameBoard: UIViewController {
     @objc func updateTimer() {
         if totalTime > 0 {
             timerLabel.text = "\(totalTime)"
-            //print("\(timeToAnswer)")
             totalTime -= 1
-        } else {
-            brain.instantLoose()
-            performSegue(withIdentifier: "fromGameToScoreBoard", sender: nil)
+        } else if totalTime == 0 {
+            //brain.instantLoose()
+            //performSegue(withIdentifier: "fromGameToScoreBoard", sender: nil)
         }
     }
     
@@ -100,7 +100,6 @@ class GameBoard: UIViewController {
     
     @objc func updateUI() {
         
-        gameTimer.playingGame()
         
         let currentQuestion = brain.getCurrentQuestionPack()
         let lifeLines = brain.lifeLines
