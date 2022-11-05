@@ -18,6 +18,13 @@ class TestVC: UIViewController {
     @IBOutlet weak var answer3: UIButton!
     @IBOutlet weak var money: UILabel!
     
+    @IBOutlet weak var audienceChoice: UILabel!
+    
+    @IBOutlet weak var fiftyFifty: UIButton!
+    @IBOutlet weak var askTheAudience: UIButton!
+    @IBOutlet weak var rightToMakeMistakes: UIButton!
+    
+    
     let brain = Brain()
     
     override func viewDidLoad() {
@@ -27,7 +34,17 @@ class TestVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-   
+    
+    @IBAction func fiftyFiftyPressed(_ sender: UIButton) {
+        brain.fiftyFifty()
+        updateUI()
+    }
+    
+    @IBAction func askAudience(_ sender: UIButton) {
+        brain.askAudience()
+        updateUI()
+    }
+    
     @IBAction func allButton(_ sender: UIButton) {
         let allButtons = [answer0, answer1, answer2, answer3]
         
@@ -46,8 +63,12 @@ class TestVC: UIViewController {
     }
     
     
+    
+    
     @objc func updateUI() {
         let currentQuestion = brain.getCurrentQuestionPack()
+        let lifeLines = brain.lifeLines
+        
         question.text = currentQuestion.question
         
         money.text = brain.getCurrentMoney()
@@ -61,6 +82,22 @@ class TestVC: UIViewController {
         answer1.backgroundColor = .clear
         answer2.backgroundColor = .clear
         answer3.backgroundColor = .clear
+        
+        
+        fiftyFifty.setTitle(lifeLines.fifty.name.rawValue, for: .normal)
+        fiftyFifty.backgroundColor = lifeLines.fifty.available == .available ? .clear : .gray
+        fiftyFifty.isUserInteractionEnabled = lifeLines.fifty.available == .available ? true : false
+        
+        
+        askTheAudience.setTitle(lifeLines.audience.name.rawValue, for: .normal)
+        askTheAudience.backgroundColor = lifeLines.audience.available == .available ? .clear : .gray
+        askTheAudience.isUserInteractionEnabled = lifeLines.audience.available == .available ? true : false
+        
+        audienceChoice.isHidden = !lifeLines.audience.activeNow
+        audienceChoice.text = brain.audienceChoice
+        
+        
+        rightToMakeMistakes.setTitle("Mistake", for: .normal)
         
     }
      
