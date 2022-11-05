@@ -13,6 +13,12 @@ class GameBoard: UIViewController {
     let brain = Brain.brainStart
     let gameTimer = GameTimer.TimerStart
     
+    
+    var timer = Timer()
+    var player: AVAudioPlayer!
+    var totalTime = 29
+    var secondsPassed = 0
+    
     @IBOutlet weak var question: UITextView!
     
     @IBOutlet weak var timerLabel: UILabel!
@@ -53,7 +59,16 @@ class GameBoard: UIViewController {
         super.viewDidLoad()
         
         updateUI()
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target:self, selector: #selector(updateTimer), userInfo:nil, repeats: true)
 
+    }
+    
+    @objc func updateTimer() {
+        if totalTime > 0 {
+            timerLabel.text = "\(totalTime)"
+            //print("\(timeToAnswer)")
+            totalTime -= 1
+        }
     }
     
     
