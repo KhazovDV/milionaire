@@ -60,17 +60,6 @@ class GameBoard: UIViewController {
     @IBAction func answerButton(_ sender: UIButton) {
         let allButtons = [answer0, answer1, answer2, answer3]
         
-        /*
-        timer.invalidate()
-        timerLabel.text = "30"
-        secondsPassed = 0
-        
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target:self, selector: #selector(updateTimer), userInfo:nil, repeats: true)
-        let url = Bundle.main.url(forResource: "zvukTikanya1", withExtension: "mp3")
-        player = try! AVAudioPlayer(contentsOf: url!)
-        player.play()
-         */
-        
         let userAnswer = brain.checkAnswer(forAnswer: sender.currentTitle!)
                 
         sender.backgroundColor = userAnswer.isUserAnswerCorrect ? .green : .red
@@ -90,16 +79,6 @@ class GameBoard: UIViewController {
          
     }
     
-    /*
-    @objc func updateTimer() {
-        if timeToAnswer > 0 {
-            timerLabel.text = "\(timeToAnswer)"
-            //print("\(timeToAnswer)")
-            timeToAnswer -= 1
-            
-        }
-    }
-     */
     
     @objc func updateUI() {
         
