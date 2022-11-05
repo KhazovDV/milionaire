@@ -8,7 +8,7 @@ class Brain {
     private let mediumLevel = 10
     private let finalLevel = 15
     
-    var currentLevel = 1
+    var currentLevel = 0
     
     //паки вопросы/ответы для разных уровней сложности
     private let easyQuestionsData = EasyQuestions()
@@ -18,10 +18,10 @@ class Brain {
     
     //какой пак сложности сейчас используется
     private var currentQuestionPack: QuestionsLevel {
-        if currentLevel < easyLevel {
+        if currentLevel <= easyLevel {
             return easyQuestionsData
         }
-        else if currentLevel < mediumLevel {
+        else if currentLevel <= mediumLevel {
             return mediumQuestionsData
         }
         else {

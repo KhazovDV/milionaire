@@ -28,10 +28,20 @@ class GameScoreVC: UIViewController {
     
     var levels = [LevelMoneyGuaranteeWin]()
     
+    var allLabels = [UILabel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        allLabels.append(contentsOf:[level1, level2, level3, level4, level5, level6, level7, level8, level9, level10, level11, level12, level13, level14, level15])
+        
+        for (i, label) in allLabels.enumerated() {
+            label.text = levels[i].money
+            label.backgroundColor = levels[i].currentQuestion ? UIColor.green : .clear
+            label.textColor = levels[i].guaranteedLevel ? UIColor.blue : UIColor.black
+            label.text = (levels[i].win ? "⭐ " : "") + label.text!
+        }
+        
 
-        print(levels)
     }
     
 
