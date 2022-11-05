@@ -39,7 +39,6 @@ class GameScoreVC: UIViewController {
         super.viewDidLoad()
         
         gameTimer.stop()
-        
         gameSound.stop()
 
         

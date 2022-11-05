@@ -17,8 +17,7 @@ class PopupViewController: UIViewController {
         
         popupView.layer.cornerRadius = 16
         audienceChoice.text = brain.audienceChoice
-        
-        
+                
         timer = Timer.scheduledTimer(timeInterval: 1.0, target:self, selector: #selector(updateTimer), userInfo:nil, repeats: true)
     }
        
@@ -26,6 +25,14 @@ class PopupViewController: UIViewController {
         print(gameTimer.totalTime)
         if gameTimer.totalTime == 1 {
             timer.invalidate()
+            
+            
+            /*
+            let vc = GameScoreVC()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+             */
+             
             self.dismiss(animated: true)
         }
     }
