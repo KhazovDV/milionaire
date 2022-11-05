@@ -105,7 +105,7 @@ class Brain {
      */
     var audienceChoice: String {
         let hardQuestionPercent = 50
-        let otherQuestionPercent = 1
+        let otherQuestionPercent = 70
         let correctAnswer = currentQuestionPack.currentQuestion!.correctAnswer
         var allAnswers = currentQuestionPack.currentQuestion!.answers
         allAnswers.removeAll{$0 == correctAnswer}
@@ -159,7 +159,6 @@ class Brain {
         isUserRight ? correctAnswer() : wrongAnswer()
         
         lifeLines.makeMistake.activeNow = false
-        
         return(isUserRight, answer)
     }
     

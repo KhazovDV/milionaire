@@ -459,7 +459,7 @@
                                         <rect key="frame" x="140" y="641" width="136" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Go next Question"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Go back to Game"/>
                                         <connections>
                                             <segue destination="TCO-ZT-Tet" kind="presentation" modalPresentationStyle="fullScreen" id="slM-rh-IH0"/>
                                         </connections>
@@ -592,7 +592,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YVn-pf-ROE"/>
         <segue reference="slM-rh-IH0"/>
     </inferredMetricsTieBreakers>
     <resources>

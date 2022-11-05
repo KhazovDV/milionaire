@@ -7,6 +7,7 @@ class PopupViewController: UIViewController {
     let brain = Brain.brainStart
     
     @IBOutlet weak var audienceChoice: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

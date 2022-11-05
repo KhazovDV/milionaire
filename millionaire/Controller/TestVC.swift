@@ -64,12 +64,17 @@ class TestVC: UIViewController {
                 
         sender.backgroundColor = userAnswer.isUserAnswerCorrect ? .green : .red
         
+        
+        print(brain.lifeLines.makeMistake.available, brain.lifeLines.makeMistake.activeNow)
         for button in allButtons {
-            button!.backgroundColor = button!.currentTitle == userAnswer.answer ? UIColor.green : UIColor.red
+            if button!.currentTitle == brain.getCurrentQuestionPack().correctAnswer {
+                if brain.lifeLines.makeMistake.available == .notAvailable {
+                    button!.backgroundColor = .green
+                }
+            }
         }
         
-        
-        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
         
         performSegue(withIdentifier: "fromGameToScore", sender: nil)
     }
