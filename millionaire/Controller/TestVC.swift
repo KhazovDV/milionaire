@@ -19,7 +19,6 @@ class TestVC: UIViewController {
     @IBOutlet weak var answer3: UIButton!
     @IBOutlet weak var money: UILabel!
     
-    @IBOutlet weak var audienceChoice: UILabel!
     
     @IBOutlet weak var fiftyFifty: UIButton!
     @IBOutlet weak var askTheAudience: UIButton!
@@ -43,7 +42,6 @@ class TestVC: UIViewController {
     
     @IBAction func askAudience(_ sender: UIButton) {
         brain.askAudience()
-        print(brain.lifeLines.audience.available)
         updateUI()
     }
     
@@ -93,9 +91,6 @@ class TestVC: UIViewController {
         askTheAudience.setTitle(lifeLines.audience.name.rawValue, for: .normal)
         askTheAudience.backgroundColor = lifeLines.audience.available == .available ? .clear : .gray
         askTheAudience.isUserInteractionEnabled = lifeLines.audience.available == .available ? true : false
-        
-        audienceChoice.isHidden = !lifeLines.audience.activeNow
-        //audienceChoice.text = brain.audienceChoice
         
         
         rightToMakeMistakes.setTitle(lifeLines.makeMistake.name.rawValue, for: .normal)

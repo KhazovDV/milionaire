@@ -71,15 +71,14 @@ class Brain {
     
     func askAudience() {
         lifeLines.audience.activeNow = true
-        lifeLines.audience.available = .notAvailable        
+        lifeLines.audience.available = .notAvailable
     }
     
     
     /*
-     тут не понятно как работает:
-     var allAnswers = currentQuestionPack.currentQuestion!.answers
-     let incorectAnswers = allAnswers.removeAll{$0 == correctAnswer}
-     НО РАБОТАЕТ
+     почему тут не срабатывает строка lifeLines.audience.available = .notAvailable ?
+     Если я ее сюда добавляю
+     
      */
     var audienceChoice: String {
         let hardQuestionPercent = 50
