@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class TestVC: UIViewController {
         
@@ -68,9 +69,10 @@ class TestVC: UIViewController {
         print(brain.lifeLines.makeMistake.available, brain.lifeLines.makeMistake.activeNow)
         for button in allButtons {
             if button!.currentTitle == brain.getCurrentQuestionPack().correctAnswer {
-                if brain.lifeLines.makeMistake.available == .notAvailable {
+                if brain.lifeLines.makeMistake.activeNow != true {
                     button!.backgroundColor = .green
                 }
+                else { brain.makeMistakeOff()}
             }
         }
         

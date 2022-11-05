@@ -97,6 +97,9 @@ class Brain {
         lifeLines.makeMistake.available = .notAvailable
     }
     
+    func makeMistakeOff() {
+        lifeLines.makeMistake.activeNow = false
+    }
     
     /*
      почему тут не срабатывает строка lifeLines.audience.available = .notAvailable ?
@@ -158,7 +161,6 @@ class Brain {
         
         isUserRight ? correctAnswer() : wrongAnswer()
         
-        lifeLines.makeMistake.activeNow = false
         return(isUserRight, answer)
     }
     
