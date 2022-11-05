@@ -7,11 +7,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StartVC: UIViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
 
     @IBAction func gameRullesButton(_ sender: Any) {

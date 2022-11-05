@@ -8,8 +8,7 @@
 import UIKit
 
 class TestVC: UIViewController {
-    
-    
+        
     
     @IBOutlet weak var question: UILabel!
     
@@ -25,7 +24,7 @@ class TestVC: UIViewController {
     @IBOutlet weak var rightToMakeMistakes: UIButton!
     @IBOutlet weak var takeMoneyNow: UIButton!
     
-    let brain = Brain()
+    let brain = Brain.brainStart
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +62,6 @@ class TestVC: UIViewController {
     }
     
     
-    
     @objc func updateUI() {
         let currentQuestion = brain.getCurrentQuestionPack()
         let lifeLines = brain.lifeLines
@@ -97,8 +95,6 @@ class TestVC: UIViewController {
         
         takeMoneyNow.setTitle(lifeLines.moneyNow.name.rawValue, for: .normal)
         
-        
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -109,5 +105,6 @@ class TestVC: UIViewController {
             gameScoreView.levels = brain.levels
         }
     }
+    
      
 }

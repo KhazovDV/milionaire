@@ -2,6 +2,7 @@ import Foundation
 
 class Brain {
     
+    static let brainStart = Brain()
     
     //на каких уровнях какие по сложности вопросы
     private let easyLevel = 5
@@ -28,6 +29,14 @@ class Brain {
             return hardQuestuinsData
         }
     }
+    
+    enum GameState: String {
+        case win = "You are winner! Congratulations"
+        case loose = "You have loose :("
+        case playing = "Playing right now"
+    }
+    
+    var currentGame: GameState = .playing
     
     var levels = [
         //LevelMoneyGuaranteeWin(level: 0, money: "Start of game"),
@@ -126,7 +135,7 @@ class Brain {
         currentLevel += 1
         goNextQuestion()
     }
-    
+
     
     //проверяет ответ игрока
     func checkAnswer(forAnswer userAnswer: String) -> (isUserAnswerCorrect: Bool, answer: String) {
@@ -140,11 +149,12 @@ class Brain {
     
     //если игрок ответил не верно
     private func wrongAnswer() {
-        
+        currentGame = .loose
     }
     
     //игрок ответил верно
     private func correctAnswer() {
+        if levels[currentLevel].win {currentGame = .win}
         gotoNextLevel()
     }
 }
