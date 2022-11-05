@@ -17,6 +17,7 @@
 		9E58F76F29157B0A004800A9 /* ViewControllerTest3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E58F76E29157B0A004800A9 /* ViewControllerTest3.swift */; };
 		AA45BEEE29158B6E0039CE1A /* GameRulesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA45BEED29158B6E0039CE1A /* GameRulesVC.swift */; };
 		AA45BEF1291591100039CE1A /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA45BEF0291591100039CE1A /* TestVC.swift */; };
+		AA45BEF3291642B90039CE1A /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA45BEF2291642B90039CE1A /* PopupViewController.swift */; };
 		AA4829D02914292F0071452F /* LevelMoneyGuaranteeWin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4829CF2914292F0071452F /* LevelMoneyGuaranteeWin.swift */; };
 		AA4829D229143C8A0071452F /* Lifelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4829D129143C8A0071452F /* Lifelines.swift */; };
 		AA73CDD82913F911000A7894 /* QuestionsAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA73CDD72913F911000A7894 /* QuestionsAnswer.swift */; };
@@ -36,6 +37,7 @@
 		9E58F76E29157B0A004800A9 /* ViewControllerTest3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTest3.swift; sourceTree = "<group>"; };
 		AA45BEED29158B6E0039CE1A /* GameRulesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRulesVC.swift; sourceTree = "<group>"; };
 		AA45BEF0291591100039CE1A /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
+		AA45BEF2291642B90039CE1A /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		AA4829CF2914292F0071452F /* LevelMoneyGuaranteeWin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelMoneyGuaranteeWin.swift; sourceTree = "<group>"; };
 		AA4829D129143C8A0071452F /* Lifelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lifelines.swift; sourceTree = "<group>"; };
 		AA73CDD72913F911000A7894 /* QuestionsAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsAnswer.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				9E58F76E29157B0A004800A9 /* ViewControllerTest3.swift */,
 				AA45BEED29158B6E0039CE1A /* GameRulesVC.swift */,
 				AA45BEF0291591100039CE1A /* TestVC.swift */,
+				AA45BEF2291642B90039CE1A /* PopupViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				9E1A41D529102B67009D16BD /* Brain.swift in Sources */,
 				AA73CDDA2913FE51000A7894 /* QuestionsAnswerData.swift in Sources */,
 				9E1A41C029102A9B009D16BD /* SceneDelegate.swift in Sources */,
+				AA45BEF3291642B90039CE1A /* PopupViewController.swift in Sources */,
 				AA45BEF1291591100039CE1A /* TestVC.swift in Sources */,
 				AA73CDD82913F911000A7894 /* QuestionsAnswer.swift in Sources */,
 			);

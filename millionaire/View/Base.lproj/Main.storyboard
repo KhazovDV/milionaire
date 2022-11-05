@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,7 +22,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03s-7b-i0D">
                                         <rect key="frame" x="141.5" y="50" width="121" height="34.5"/>
-                                        <state key="normal" title="Button"/>
+                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Начать игру">
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
@@ -32,6 +32,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88y-dU-h19">
                                         <rect key="frame" x="133.5" y="134.5" width="137" height="34"/>
+
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Правила игры">
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
@@ -249,7 +250,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="answer0Button:" destination="TCO-ZT-Tet" eventType="touchUpInside" id="9U7-Qc-fFx"/>
+                                    <action selector="allButton:" destination="TCO-ZT-Tet" eventType="touchUpInside" id="1sH-oR-ohz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6Y-vE-B48">
@@ -258,7 +259,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="answer2Button:" destination="TCO-ZT-Tet" eventType="touchUpInside" id="Zfk-xu-laj"/>
+                                    <action selector="allButton:" destination="TCO-ZT-Tet" eventType="touchUpInside" id="GSm-jy-8lC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdg-gl-PCe">
@@ -267,7 +268,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="answer3Button:" destination="TCO-ZT-Tet" eventType="touchUpInside" id="yi8-vz-syI"/>
+                                    <action selector="allButton:" destination="TCO-ZT-Tet" eventType="touchUpInside" id="Z1h-1V-dHI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="686-U4-GgB">
@@ -276,19 +277,64 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="answer1Button:" destination="TCO-ZT-Tet" eventType="touchUpInside" id="3Sf-vh-jgE"/>
+                                    <action selector="allButton:" destination="TCO-ZT-Tet" eventType="touchUpInside" id="0px-rj-Vyx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRw-b2-Olj">
+                                <rect key="frame" x="30" y="652" width="77" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="fiftyFiftyPressed:" destination="TCO-ZT-Tet" eventType="touchUpInside" id="PlG-mu-yzL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8T-vs-JW6">
+                                <rect key="frame" x="105" y="652" width="81" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="askAudience:" destination="TCO-ZT-Tet" eventType="touchUpInside" id="4tz-mW-5Sx"/>
+                                    <segue destination="aAO-uc-gIc" kind="popoverPresentation" popoverAnchorView="X8T-vs-JW6" id="0jE-hg-R5P">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4I-T8-2qJ">
+                                <rect key="frame" x="181" y="652" width="80" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JgU-QT-FAN">
+                                <rect key="frame" x="284" y="652" width="78" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XM7-pT-Att">
+                                <rect key="frame" x="273" y="752" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5gW-mY-2Gu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="answer0" destination="lde-fh-cqV" id="a5r-Q5-KZt"/>
-                        <outlet property="answer1" destination="686-U4-GgB" id="oug-Wx-4pY"/>
-                        <outlet property="answer2" destination="M6Y-vE-B48" id="yjm-RL-TKg"/>
-                        <outlet property="answer3" destination="Kdg-gl-PCe" id="Ztq-It-awP"/>
+                        <outlet property="answer0" destination="lde-fh-cqV" id="4G2-Sr-wV5"/>
+                        <outlet property="answer1" destination="686-U4-GgB" id="Gqh-hq-ZIg"/>
+                        <outlet property="answer2" destination="M6Y-vE-B48" id="lAq-BE-Nwu"/>
+                        <outlet property="answer3" destination="Kdg-gl-PCe" id="tYS-SN-bDq"/>
+                        <outlet property="askTheAudience" destination="X8T-vs-JW6" id="CUt-uJ-w3e"/>
+                        <outlet property="fiftyFifty" destination="NRw-b2-Olj" id="i1F-Tv-Duc"/>
+                        <outlet property="money" destination="XM7-pT-Att" id="pAW-vK-5BU"/>
                         <outlet property="question" destination="E88-z5-Yhv" id="1z7-YS-w1c"/>
+                        <outlet property="rightToMakeMistakes" destination="b4I-T8-2qJ" id="ZA1-Xi-uGW"/>
+                        <outlet property="takeMoneyNow" destination="JgU-QT-FAN" id="EPM-To-2iw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70g-x8-cKN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -464,11 +510,46 @@
             </objects>
             <point key="canvasLocation" x="586.15384615384619" y="-16.350710900473931"/>
         </scene>
+        <!--Popup View Controller-->
+        <scene sceneID="6yw-GC-4Aq">
+            <objects>
+                <viewController storyboardIdentifier="popUpVC" id="aAO-uc-gIc" customClass="PopupViewController" customModule="millionaire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="alF-Vx-GT4">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WqF-1d-Inv">
+                                <rect key="frame" x="75" y="223" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3d9-a1-Let">
+                                        <rect key="frame" x="99" y="54" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FCW-8F-fAl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="audienceChoice" destination="3d9-a1-Let" id="qGU-n7-WMd"/>
+                        <outlet property="popupView" destination="WqF-1d-Inv" id="hvw-Ut-VlG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uFq-Bg-2fe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1092" y="15"/>
+        </scene>
     </scenes>
     <resources>
         <image name="millionaire" width="512" height="512"/>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

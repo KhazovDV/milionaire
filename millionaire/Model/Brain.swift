@@ -18,14 +18,14 @@ class Brain {
     
     //какой пак сложности сейчас используется
     private var currentQuestionPack: QuestionsLevel {
-        if currentLevel <= easyLevel {
-            return EasyQuestions()
+        if currentLevel < easyLevel {
+            return easyQuestionsData
         }
-        else if currentLevel <= mediumLevel {
-            return MediumQuestions()
+        else if currentLevel < mediumLevel {
+            return mediumQuestionsData
         }
         else {
-            return HardQuestions()
+            return hardQuestuinsData
         }
     }
     
@@ -49,38 +49,56 @@ class Brain {
 
     ]
     
-    var lifeLines = [
-        LifeLine(name: .fiftyFifty, percents: 50),
-        LifeLine(name: .askTheAudience, percents: 70),
-        LifeLine(name: .rightToMakeMistakes, percents: 100)
-        ]
+    var lifeLines = (fifty:LifeLine(name: .fiftyFifty),
+                  audience: LifeLine(name: .askTheAudience),
+               makeMistake:LifeLine(name: .rightToMakeMistakes),
+                     moneyNow: LifeLine(name: .takeMoneyNow)
+        )
     
     
-    func activateLifeLine(userChoose lifelineChoosen: LifeLine) {
-        for (i, currentLifeline) in lifeLines.enumerated() {
-            if currentLifeline.name == lifelineChoosen.name {
-                lifeLines[i].activeNow = true
-                lifeLines[i].available = .notAvailable
-            }
+    //это конечно полный фейл и нужно было делать через структуру и энум
+    func fiftyFifty() {
+        //var allAnswers = currentQuestionPack.currentQuestion!.answers
+        let correctAnswer = currentQuestionPack.currentQuestion!.correctAnswer
+        let oneIncorectAnswer =  currentQuestionPack.currentQuestion!.answers.filter {$0 != correctAnswer}.randomElement()!
+        
+        for (i, answer) in currentQuestionPack.currentQuestion!.answers.enumerated() where answer != oneIncorectAnswer && answer != correctAnswer {
+            currentQuestionPack.currentQuestion!.answers[i] = ""
         }
+        
+        lifeLines.fifty.activeNow = true
+        lifeLines.fifty.available = .notAvailable
     }
     
-    func fiftyFifty() -> QuestionsAnswer {
-        var allAnswers = currentQuestionPack.currentQuestion!.answers
+    func askAudience() {
+        lifeLines.audience.activeNow = true
+        lifeLines.audience.available = .notAvailable
+    }
+    
+    
+    /*
+     почему тут не срабатывает строка lifeLines.audience.available = .notAvailable ?
+     Если я ее сюда добавляю
+     
+     */
+    var audienceChoice: String {
+        let hardQuestionPercent = 50
+        let otherQuestionPercent = 70
         let correctAnswer = currentQuestionPack.currentQuestion!.correctAnswer
-        let oneIncorectAnswer =  allAnswers.filter {$0 != correctAnswer}.randomElement()!
+        var allAnswers = currentQuestionPack.currentQuestion!.answers
+        allAnswers.removeAll{$0 == correctAnswer}
         
-        for (i, answer) in allAnswers.enumerated() where answer != oneIncorectAnswer && answer != correctAnswer {
-            allAnswers[i] = ""
-        }
-        return currentQuestionPack.currentQuestion!
+        let currentPercent = currentQuestionPack === hardQuestuinsData ? hardQuestionPercent : otherQuestionPercent
+        let result = arc4random_uniform(100) > currentPercent ? allAnswers.randomElement()! : correctAnswer
+        
+        return result
     }
         
 
     
     //возвращает следующий вопрос/ответ для текущего уровня сложности
-    private func getNextQuestion() -> QuestionsAnswer {
-        return currentQuestionPack.getQuestion()
+    private func goNextQuestion() {
+        currentQuestionPack.getQuestion()
     }
 
     //возвращает сколько денег сейчас у игрока
@@ -89,17 +107,24 @@ class Brain {
     }
     
     func getCurrentQuestionPack() -> QuestionsAnswer {
-        currentQuestionPack.currentQuestion ?? getNextQuestion()
+        if currentQuestionPack.currentQuestion != nil {
+            return currentQuestionPack.currentQuestion!
+        }
+        else {
+            goNextQuestion()
+            return currentQuestionPack.currentQuestion!
+        }
         
     }
     
     //переводит игрока на след уровень
-    private func gotoNextLevel() {
+    func gotoNextLevel() {
         if currentLevel != 0 {
             levels[currentLevel-1].currentQuestion = false
         }
         levels[currentLevel].currentQuestion = true
         currentLevel += 1
+        goNextQuestion()
     }
     
     
