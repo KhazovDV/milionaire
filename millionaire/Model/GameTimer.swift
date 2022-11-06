@@ -6,7 +6,7 @@ class GameTimer {
     
     var timer = Timer()
     
-    var totalTime = 10
+    var totalTime = 30
     
     
     func start(){
@@ -14,7 +14,7 @@ class GameTimer {
     }
     
     func stop() {
-        totalTime = 10
+        totalTime = 30
         timer.invalidate()
     }
     

@@ -88,8 +88,8 @@ class GameBoard: UIViewController {
         let userAnswer = brain.checkAnswer(forAnswer: sender.currentTitle!)
         
         gameSound.userChoice()
-        
-        sleep(10)
+                
+        sleep(5)
                 
         sender.backgroundColor = userAnswer.isUserAnswerCorrect ? .green : .red
         
@@ -101,7 +101,7 @@ class GameBoard: UIViewController {
                 }
             }
         }
-        
+                
         
         performSegue(withIdentifier: "fromGameToScoreBoard", sender: nil)
          
@@ -127,11 +127,13 @@ class GameBoard: UIViewController {
         answer2.isHidden = currentQuestion.answers[2] == "" ? true : false
         answer3.isHidden = currentQuestion.answers[3] == "" ? true : false
         
+        
+        
         answer0.backgroundColor = .clear
         answer1.backgroundColor = .clear
         answer2.backgroundColor = .clear
         answer3.backgroundColor = .clear
-        
+    
         
         fiftyFifty.setTitle(lifeLines.fifty.name.rawValue, for: .normal)
         fiftyFifty.backgroundColor = lifeLines.fifty.available == .available ? .clear : .gray
