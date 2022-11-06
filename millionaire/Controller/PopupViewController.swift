@@ -22,17 +22,8 @@ class PopupViewController: UIViewController {
     }
        
     @objc func updateTimer() {
-        print(gameTimer.totalTime)
         if gameTimer.totalTime == 0 {
-            timer.invalidate()
-            
-            
-            /*
-            let vc = GameScoreVC()
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true, completion: nil)
-             */
-             
+            timer.invalidate() 
             self.dismiss(animated: true)
         }
     }
