@@ -16,18 +16,24 @@ class PopupViewController: UIViewController {
         view.backgroundColor = UIColor.black.withAlphaComponent(0.75)
         
         popupView.layer.cornerRadius = 16
-        
         audienceChoice.text = brain.audienceChoice
-        
+                
         timer = Timer.scheduledTimer(timeInterval: 1.0, target:self, selector: #selector(updateTimer), userInfo:nil, repeats: true)
     }
        
     @objc func updateTimer() {
-        if gameTimer.totalTime <= 0 {
+        print(gameTimer.totalTime)
+        if gameTimer.totalTime == 1 {
             timer.invalidate()
-            gameTimer.stop()
-            brain.instantLoose()
-            performSegue(withIdentifier: "fromPopupToScoreBoard", sender: nil)
+            
+            
+            /*
+            let vc = GameScoreVC()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+             */
+             
+            self.dismiss(animated: true)
         }
     }
 }

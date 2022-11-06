@@ -95,7 +95,6 @@ class GameBoard: UIViewController {
                 if brain.lifeLines.makeMistake.activeNow != true {
                     button!.backgroundColor = .green
                 }
-                else { brain.makeMistakeOff()}
             }
         }
         
