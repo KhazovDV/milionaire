@@ -44,5 +44,11 @@ class GameSound {
         player.stop()
     }
     
+    func playIntro() {
+        let url = Bundle.main.url(forResource: "intro", withExtension: "mp3")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player.play()
+    }
+    
 }
 

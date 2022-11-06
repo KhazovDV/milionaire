@@ -98,7 +98,7 @@ class GameBoard: UIViewController {
             }
         }
         
-        Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        //Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
         performSegue(withIdentifier: "fromGameToScoreBoard", sender: nil)
          
     }
