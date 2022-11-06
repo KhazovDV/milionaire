@@ -86,10 +86,14 @@ class GameBoard: UIViewController {
         let allButtons = [answer0, answer1, answer2, answer3]
         
         let userAnswer = brain.checkAnswer(forAnswer: sender.currentTitle!)
+        
+        gameSound.userChoice()
+        
+        sleep(10)
                 
         sender.backgroundColor = userAnswer.isUserAnswerCorrect ? .green : .red
         
-        
+
         for button in allButtons {
             if button!.currentTitle == brain.getCurrentQuestionPack().correctAnswer {
                 if brain.lifeLines.makeMistake.activeNow != true {
@@ -98,7 +102,7 @@ class GameBoard: UIViewController {
             }
         }
         
-        //Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        
         performSegue(withIdentifier: "fromGameToScoreBoard", sender: nil)
          
     }
