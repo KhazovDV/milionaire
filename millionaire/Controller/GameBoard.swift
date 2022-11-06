@@ -71,7 +71,7 @@ class GameBoard: UIViewController {
     }
     
     @objc func updateTimer() {
-        if gameTimer.totalTime > 0 {
+        if gameTimer.totalTime >= 0 {
             timerLabel.text = "\(gameTimer.totalTime)"
         } else {
             timer.invalidate()

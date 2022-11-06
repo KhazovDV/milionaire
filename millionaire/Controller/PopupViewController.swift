@@ -23,7 +23,7 @@ class PopupViewController: UIViewController {
        
     @objc func updateTimer() {
         print(gameTimer.totalTime)
-        if gameTimer.totalTime == 1 {
+        if gameTimer.totalTime == 0 {
             timer.invalidate()
             
             

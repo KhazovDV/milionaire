@@ -19,7 +19,7 @@ class GameTimer {
     }
     
     @objc func update() -> Void {
-        if totalTime > 0 {
+        if totalTime > -1 {
             totalTime -= 1
         }
     }
